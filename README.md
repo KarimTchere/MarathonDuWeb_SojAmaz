@@ -9,12 +9,9 @@
 
 
 
-## Bienvenue dans notre Aventure Soja & Biodiversité ! 🌱🌿
+## Bienvenue dans notre projet Soja & Biodiversité ! 🌱🌿
 
-Ce dépôt GitHub est le centre névralgique de notre projet : "Soja & Biodiversité". Nous, étudiants de l'Université de Montpellier 3, MIASHS et CNO, sommes unis lors du Marathon du Web pour une semaine d'exploration et de créativité au service de nos commanditaires.
-
-## Contexte
-Dans un monde où la culture du soja prend de plus en plus d'ampleur, notamment en Amazonie, les enjeux de préservation de la biodiversité et de soutien aux agriculteurs familiaux deviennent primordiaux. Notre projet se focalise sur la région de Santarém, où les communautés rurales sont menacées par l'expansion rapide des grandes exploitations de soja. Notre objectif est d'étudier l'impact de cette culture sur l'environnement, la santé et la vie des habitants, tout en proposant des solutions durables pour préserver la biodiversité et soutenir les agriculteurs familiaux.
+Ce dépôt GitHub présente les travaux réalisés dans le cadre d'un projet de recherche visant à étudier l'impact de la culture du soja sur la biodiversité, avec un focus particulier sur la région de Santarém, en Amazonie brésilienne. Le projet est mené par des étudiants du master 1 Miashs et CNO de l'Université de Montpellier 3 dans le cadre du Marathon du Web.
 
 ## Objectifs
 - Analyser l'impact de la culture du soja sur l'environnement, la santé et la vie des communautés rurales.
@@ -31,7 +28,7 @@ Pour atteindre nos objectifs, nous utiliserons une approche pluridisciplinaire, 
 - Affiches et supports de communication pour sensibiliser le public aux enjeux du projet.
 
 ## Qui Sommes-Nous ?
-Nous sommes un groupe d'étudiants passionnés par les enjeux environnementaux et sociaux, déterminés à faire une différence dans le monde. Notre équipe se compose de :
+Nous sommes un groupe d'étudiants passionnés par les enjeux environnementaux et sociaux. Notre équipe se compose de :
 
 **MIASHS :**
 
@@ -42,10 +39,11 @@ Nous sommes un groupe d'étudiants passionnés par les enjeux environnementaux e
   - Email : fehizoro.randriamisanta@etu.univ-montp3.fr
  
 - **Florian DUBOIS** 
-  - Email : florian.dubois@etu.univ-montp3.fr
+  - Email : florian.dubois1@etu.univ-montp3.fr
  
 - **Karim TCHERE** 
   - Email : karim.tchere@etu.univ-montp3.fr
 
 ## Rejoignez-Nous !
 Nous vous invitons à vous joindre à notre aventure et à soutenir notre mission de préserver la biodiversité et de soutenir les agriculteurs familiaux. Ensemble, nous pouvons créer un avenir plus durable et équitable pour tous. 🚀🌎
+
