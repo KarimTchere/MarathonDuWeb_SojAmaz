@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Projet sur les Plantes</title>
+    <style>
+        /* Réinitialisation des marges et des paddings */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styles généraux */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styles pour le header */
+        header {
+            background-color: #86c37d; /* Vert doux pour évoquer la nature */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 0;
+        }
+
+        /* Styles pour la navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            padding-bottom: 5px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffd700; /* Jaune vif pour une touche de contraste */
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Changement de couleur au survol pour correspondre au soulignement */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">Rédirect 1</a>
+            <a href="">Rédirect 2</a>
+            <a href="">Rédirect 3</a>
+            <a href="">Rédirect 4</a>
+        </nav>
+    </header>
+</body>
+</html>

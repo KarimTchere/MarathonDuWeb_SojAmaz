@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <script src="leaflet/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>index</title>
+<style>
+    /* Réinitialisation des marges et des paddings */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 500px); /* Ajustez la hauteur selon vos besoins */
+    background-image: url('./image.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ajout de la superposition semi-transparente */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Couleur noire plus sombre */
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.text-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Ombre portée sur le texte */
+}
+</style>
+</head>
+<body>
+    <iframe src="./partials/header/header.html" frameborder="0" width="100%" height="100"></iframe>
+    <div class="hero">
+        <div class="text-container">
+            <h1>Tableau de bord d’évaluation de l'impact de la culture du soja sur la biodiversité.</h1>
+        </div>
+    </div>
+    <div id="divmap" style="width: 900px; height: 500px; border: 3px solid gray; margin: 20px auto;"></div> <!-- Augmentez la marge inférieure pour éviter le chevauchement -->
+    <script>
+        var map = L.map('divmap');
+        map.setView([-2.75333445, -54.67013988], 10);
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            /* maxZoom: 17,
+            minZoom: 9 */
+        }).addTo(map);
+
+        $.ajax({
+            url: "./json/data.geojson",
+            dataType: "json",
+            success: function(data) {
+                console.log(data);
+                L.geoJson(data, {
+                    pointToLayer: function(feature, latlng) {
+                        var marker = L.marker(latlng, { icon: ratIcon });
+                        marker.bindPopup('Latitude: ' + latlng.lat + '<br>Longitude: ' + latlng.lng);
+                        return marker;
+                    }
+                }).addTo(map);
+            }
+        });
+
+
+        var ratIcon = L.icon({
+            iconUrl: './icon/icon.png',
+            iconSize: [25, 25]
+        });
+    </script>
+</body>
+</html>
