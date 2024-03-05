@@ -4,51 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <link rel="stylesheet" href="MarkerCluster.css" />
+    <link rel="stylesheet" href="MarkerCluster.Default.css" />
+    <script src="d3.min.js"></script>
     <script src="leaflet/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
     <title>index</title>
-<style>
-    /* Réinitialisation des marges et des paddings */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-.hero {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 500px); /* Ajustez la hauteur selon vos besoins */
-    background-image: url('./image.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
-}
-
-/* Ajout de la superposition semi-transparente */
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Couleur noire plus sombre */
-}
-
-.text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    z-index: 1;
-}
-
-.text-container h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Ombre portée sur le texte */
-}
-</style>
+    <style>
+        /* Réinitialisation des marges et des paddings */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 500px); 
+            background-image: url('./image.jpeg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        /* Ajout de la superposition semi-transparente */
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Couleur noire plus sombre */
+        }
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+        .text-container h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Ombre portée sur le texte */
+        }
+        /* Infobulle */
+        .leaflet-popup-content-wrapper {
+            background-color: #ecf4b9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            max-width: 220px; /* Ajuster la largeur de l'infobulle */
+        }
+        .leaflet-popup-content {
+            margin: 10px;
+            font-size: 14px;
+            line-height: 1;
+        }
+        .leaflet-popup-content h2 {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+        .leaflet-popup-content p {
+            margin-bottom: 2px;
+            font-size: 10px; /* Ajuster la taille de police des paragraphes */
+        }
+        .lat-lng-info {
+            font-size: 10px;
+            margin-top: 2px;
+        }
+    </style>
 </head>
 <body>
     <iframe src="./partials/header/header.html" frameborder="0" width="100%" height="100"></iframe>
@@ -60,12 +85,14 @@ body, h1, h2, h3, p, ul, li {
     <div id="divmap" style="width: 900px; height: 500px; border: 3px solid gray; margin: 20px auto;"></div> <!-- Augmentez la marge inférieure pour éviter le chevauchement -->
     <script>
         var map = L.map('divmap');
-        map.setView([-2.75333445, -54.67013988], 10);
-        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            /* maxZoom: 17,
-            minZoom: 9 */
+        map.setView([-2.825254, -54.642957], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+            minZoom: 7
         }).addTo(map);
+
+        var markers = L.markerClusterGroup();
 
         $.ajax({
             url: "./json/data.geojson",
@@ -75,17 +102,29 @@ body, h1, h2, h3, p, ul, li {
                 L.geoJson(data, {
                     pointToLayer: function(feature, latlng) {
                         var marker = L.marker(latlng, { icon: ratIcon });
-                        marker.bindPopup('Latitude: ' + latlng.lat + '<br>Longitude: ' + latlng.lng);
+                        var properties = feature.properties;
+                        var popupContent = '<h2>Caractéristiques :</h2>' +
+                                          '<p><strong>Latitude:</strong> ' + latlng.lat.toFixed(6) + '</p>' +
+                                          '<p><strong>Longitude:</strong> ' + latlng.lng.toFixed(6) + '</p>' +
+                                          '<p><strong>Genre :</strong> ' + properties.Q_3_1_3_genre + '</p>' +
+                                          '<p><strong>Temps communautes:</strong> ' + properties.Q_3_3_2_temps_communautes + '</p>' +
+                                          '<p><strong>Activites professionnelles:</strong> ' + properties.Q_3_4_2_activites_professionnelles + '</p>' +
+                                          '<p><strong>Participer syndicat:</strong> ' + properties.Q_4_4_1_participer_syndicat + '</p>' +
+                                          '<p><strong>Type culture:</strong> ' + properties.Q_5_1_2_type_culture + '</p>' +
+                                          '<p><strong>Insecticides chimiques:</strong> ' + properties.Q_6_1_4_2_Insecticides_chimiques + '</p>' +
+                                          '<p><strong>Herbicide:</strong> ' + properties.Q_6_1_4_3_herbicide + '</p>' +
+                                          "<p><strong>Pratique de l'agroecologie:</strong> " + properties.Q_6_3__3_Pratique_de_l_agroecologie + '</p>';
+                        marker.bindPopup(popupContent);
                         return marker;
                     }
-                }).addTo(map);
+                }).addTo(markers);
+                map.addLayer(markers);
             }
         });
 
-
         var ratIcon = L.icon({
             iconUrl: './icon/icon.png',
-            iconSize: [25, 25]
+            iconSize: [35, 35]
         });
     </script>
 </body>
