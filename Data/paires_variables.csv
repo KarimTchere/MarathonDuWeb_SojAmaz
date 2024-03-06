@@ -1,0 +1,45 @@
+Variable1,Variable2,Coefficient
+Q_2.2.1_zona_S4 Ituqui,Q_8.1.2_titre du bien_Projet d'etablissement,0.5006840661048312
+"Q_6.2.1_Produits_chimiques_Avant, mais plus maintenant",Q_6.2.1.2_Utiliser_des_produits_chimiques_pour_controler_les_nuisibles_de_la_sante_familiale,0.8055082024585962
+Q_7.2.1_revenu_agricole_bon_mois_Vous ne savez pas,Q_7.2.2_revenu_agricole_mois_difficile_Vous ne savez pas,0.7589348709270178
+Q_7.2.2_revenu_agricole_mois_difficile_Vous ne savez pas,Q_7.2.1_revenu_agricole_bon_mois_Vous ne savez pas,0.7589348709270178
+Q_7.6.3_frequence_visites_Une fois par an,Q_7.6.1_Technique_d'assistance_a_la_visite,0.6132466646374866
+Q_8.1.2_titre du bien_Projet d'etablissement,Q_2.2.1_zona_S4 Ituqui,0.5006840661048312
+Q_9.3.1.5_Sources d'eau de sechage_Barrage de Poço,Q_9.3.1.5_Sources_d'eau_seche_ou_de_deversoir,0.5762860281572272
+Q_9.3.1.5_Sources d'eau de sechage_Bien,Q_9.3.1.4_assechement_source,0.5463671711872229
+Q_9.3.1.5_Sources d'eau de sechage_Bien,Q_9.3.1.5_Dry_well_sources,0.9141060890142477
+Q_9.3.1.5_Sources d'eau de sechage_Igarape,Q_9.3.1.4_assechement_source,0.6915455207857777
+Q_9.3.1.5_Sources d'eau de sechage_Igarape,Q_9.3.1.5_Sources d'eau seches_igarape,0.9517185673412788
+Q_9.3.1.5_Sources d'eau de sechage_Weir,Q_9.3.1.5_Sources_d'eau_seche_ou_de_deversoir,0.8157430075498929
+Q_9.4.1.3_quand_changements_lies_soja_Elle s'est developpee au cours des dix dernieres annees,Q_9.4.1.3_Les_changements_lies_au_seigle_ont_augmente_au_cours_de_10_annees,0.98564266238757
+Q_3.4.2_emploi_agricole,Q_3.4.2_emploi_communautaire,0.5130516365683754
+Q_3.4.2_emploi_communautaire,Q_3.4.2_emploi_agricole,0.5130516365683754
+Q_4.1.2.1_son,Q_1.1.1.1 Personnes agees de moins de 18 ans ?,0.5714667873307638
+Q_1.1.1.1 Personnes agees de moins de 18 ans ?,Q_4.1.2.1_son,0.5714667873307638
+Q_5.1.2_Culture de rocailles,Q_5.1.1_possede_culture,0.5413162253377906
+Q_5.1.1_possede_culture,Q_5.1.2_Culture de rocailles,0.5413162253377906
+Q_6.2.1.2_Utiliser_des_produits_chimiques_pour_controler_les_nuisibles_de_la_sante_familiale,"Q_6.2.1_Produits_chimiques_Avant, mais plus maintenant",0.8055082024585962
+Q_6.3.1_entendu_parler_agroecologie,Q_6.3.1.3_Pratique de l'agroecologie,0.6558814175231554
+Q_6.3.1.3_Pratique de l'agroecologie,Q_6.3.1_entendu_parler_agroecologie,0.6558814175231554
+Q_7.6.1_Technique_d'assistance_a_la_visite,Q_7.6.3_frequence_visites_Une fois par an,0.6132466646374866
+Q_7.6.1_Technique_d'assistance_a_la_visite,Q_7.6.2_Techniciens d'emetteurs,0.808053561475795
+Q_7.6.2_Techniciens d'emetteurs,Q_7.6.1_Technique_d'assistance_a_la_visite,0.808053561475795
+Q_9.3.1.4_assechement_source,Q_9.3.1.5_Sources d'eau de sechage_Bien,0.5463671711872229
+Q_9.3.1.4_assechement_source,Q_9.3.1.5_Sources d'eau de sechage_Igarape,0.6915455207857777
+Q_9.3.1.4_assechement_source,Q_9.3.1.5_Sources d'eau seches_igarape,0.7266281698356246
+Q_9.3.1.4_assechement_source,Q_9.3.1.5_Dry_well_sources,0.5977065219819441
+Q_9.3.1.5_Sources d'eau seches_igarape,Q_9.3.1.5_Sources d'eau de sechage_Igarape,0.9517185673412788
+Q_9.3.1.5_Sources d'eau seches_igarape,Q_9.3.1.4_assechement_source,0.7266281698356246
+Q_9.3.1.5_Sources_d'eau_seche_ou_de_deversoir,Q_9.3.1.5_Sources d'eau de sechage_Barrage de Poço,0.5762860281572272
+Q_9.3.1.5_Sources_d'eau_seche_ou_de_deversoir,Q_9.3.1.5_Sources d'eau de sechage_Weir,0.8157430075498929
+Q_9.3.1.5_Dry_well_sources,Q_9.3.1.5_Sources d'eau de sechage_Bien,0.9141060890142477
+Q_9.3.1.5_Dry_well_sources,Q_9.3.1.4_assechement_source,0.5977065219819441
+Q_9.4.1.3_Les_changements_lies_au_seigle_ont_augmente_au_cours_de_10_annees,Q_9.4.1.3_quand_changements_lies_soja_Elle s'est developpee au cours des dix dernieres annees,0.98564266238757
+Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides,Q_9.4.2.3_Comment les agrotoxines affectent le sechage des cultures,0.5246327978008836
+Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides,Q_9.4.2.3_Comment les agrotoxiques affectent les ravageurs qui envahissent les cultures,0.7030167101739754
+Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides,Q_9.4.2.3_Comment les agrotoxiques vous affectent-ils ?,0.76893529234738
+Q_9.4.2.3_Comment les agrotoxines affectent le sechage des cultures,Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides,0.5246327978008836
+Q_9.4.2.3_Comment les agrotoxines affectent le sechage des cultures,Q_9.4.2.3_Comment les agrotoxiques affectent les ravageurs qui envahissent les cultures,0.5263492295645836
+Q_9.4.2.3_Comment les agrotoxiques affectent les ravageurs qui envahissent les cultures,Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides,0.7030167101739754
+Q_9.4.2.3_Comment les agrotoxiques affectent les ravageurs qui envahissent les cultures,Q_9.4.2.3_Comment les agrotoxines affectent le sechage des cultures,0.5263492295645836
+Q_9.4.2.3_Comment les agrotoxiques vous affectent-ils ?,Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides,0.76893529234738
