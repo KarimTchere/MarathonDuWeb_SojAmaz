@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation des données</title>
+  <!-- Ajouter la balise script pour D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    /* Styles CSS pour améliorer l'esthétique */
+    #container {
+      display: flex;
+      justify-content: space-between;
+    }
+    #visualization,
+    #correlationGraph {
+      width: 48%;
+    }
+    #variables {
+      width: 30%;
+      padding: 20px;
+    }
+    svg {
+      overflow: visible;
+      margin: auto;
+      display: block;
+    }
+    .bar {
+      stroke: none;
+    }
+    .bar.positif {
+      fill: #4CAF50; /* Vert */
+    }
+    .bar.negatif {
+      fill: #F44336; /* Rouge */
+    }
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: black;
+      shape-rendering: crispEdges;
+    }
+    .axis text {
+      font-family: sans-serif;
+      font-size: 12px;
+    }
+    .legend text {
+      font-family: sans-serif;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Visualisation des données</h1>
+  
+  <div id="container">
+    <!-- Graphique -->
+    <div id="visualization"></div>
+
+    <!-- Graphique linéaire -->
+    <div id="correlationGraph"></div>
+
+    <!-- Liste des variables -->
+    <!-- Liste des variables -->
+<div id="variables">
+  <h2>Choisissez une ou plusieurs variables :</h2>
+  <form id="variableForm">
+    <label>
+      <input type="checkbox" name="variable" value="Q_3.4.2_etude" checked> Etude
+    </label><br>
+    <label>
+      <input type="checkbox" name="variable" value="Q_3.4.2_activites_agricoles"> Activité agricole
+    </label><br>
+    <label>
+      <input type="checkbox" name="variable" value="Q_3.4.2_Vente_de_produits"> Vente de produits
+    </label><br>
+    <label>
+      <input type="checkbox" name="variable" value="Q_9.4.1.3_Les_changements_lies_a_la_culture_du_soja_ont_ete_simultanes_de_15ans"> Changement lié au soja il y 15 ans
+    </label><br>
+   
+      <input type="checkbox" name="variable" value="Q_3.4.2_rural_zone_days"> Jours en zone rurale
+    </label><br>
+  
+      <input type="checkbox" name="variable" value="Q_3.4.2_proprietaire de l'entreprise"> Propriétaire de l'entreprise
+    </label><br>
+    <label>
+    
+      <input type="checkbox" name="variable" value="Q_3.4.2_ville_d'emploi"> Ville d'emploi
+    </label><br>
+    
+      <input type="checkbox" name="variable" value="Q_3.4.2_employe_public"> Employé public
+    </label><br>
+    <label>
+      <input type="checkbox" name="variable" value="Q_3.4.2_retraites"> Retraités
+    </label><br>
+    <label>
+      <input type="checkbox" name="variable" value="Q_6.2.1.2_Utiliser_des_produits_chimiques_pour_controler_les_nuisibles_de_la_sante_familiale"> Utiliser des produits chimiques pour contrôler les nuisibles de la santé familiale
+    </label><br>
+    <label>
+      <input type="checkbox" name="variable" value="Q_6.2.1.2_Utilisation_des_produits_chimiques_pour_controler_les_nuisibles_de_l'environnement"> Utilisation des produits chimiques pour contrôler les nuisibles de l'environnement
+    </label><br>
+    <!-- Ajoutez les autres variables ici -->
+  </form>
+</div>
+
+
+  <script>
+    // Charger le fichier JSON directement ici
+    d3.json("data.json").then(function(data) {
+      // Fonction pour mettre à jour le graphique
+      function updateGraph() {
+        // Sélectionner les variables sélectionnées
+        var selectedVariables = Array.from(document.querySelectorAll('input[name="variable"]:checked')).map(checkbox => checkbox.value);
+        
+        // Filtrer les données pour supprimer les lignes vides
+        var filteredData = data.filter(d => selectedVariables.every(variable => d[variable] !== "" && d[variable] !== " "));
+
+        // Sélectionner les variables pertinentes
+        var scores = filteredData.map(d => ({ 
+          scorePositif: d.score_positif_normalise, 
+          scoreNegatif: d.score_negatif_normalise, 
+          etude: d[selectedVariables[0]], 
+        }));
+
+        // Obtenir les valeurs uniques de la variable sélectionnée
+        var uniqueValues = Array.from(new Set(scores.map(d => d.etude)));
+        uniqueValues.sort(); // Trier les valeurs pour s'assurer que 0 est à gauche et 1 à droite
+
+        // Grouper les données par la variable sélectionnée
+        var groupedData = d3.rollup(scores, 
+          v => ({ 
+            count: v.length, 
+            scorePositifMean: d3.mean(v, d => d.scorePositif), 
+            scoreNegatifMean: d3.mean(v, d => d.scoreNegatif) 
+          }), 
+          d => d.etude);
+
+        // Convertir les données groupées en tableau
+        var dataArray = Array.from(groupedData, ([key, value]) => ({ key, ...value }));
+
+        // Créer le diagramme à barres côte à côte
+        var margin = { top: 20, right: 30, bottom: 60, left: 60 },
+          width = 600 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
+
+        var svg = d3.select("#visualization").select("svg");
+        if (!svg.empty()) {
+          svg.remove(); // Supprimer le graphique existant s'il existe déjà
+        }
+
+        svg = d3.select("#visualization")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var x = d3.scaleBand()
+          .domain(uniqueValues) // Utiliser les valeurs uniques comme domaine
+          .range([0, width])
+          .padding(0.1);
+
+        var y = d3.scaleLinear()
+          .domain([0, d3.max(dataArray, d => Math.max(d.scorePositifMean, d.scoreNegatifMean))]).nice()
+          .range([height, 0]);
+
+        var color = d3.scaleOrdinal()
+          .domain(["scorePositifMean", "scoreNegatifMean"])
+          .range(["green", "red"]); // Modification des couleurs ici
+
+        // Ajouter les barres pour le score positif moyen
+        svg.selectAll(".bar.positif")
+          .data(dataArray)
+          .enter().append("rect")
+          .attr("class", "bar positif")
+          .attr("x", d => x(d.key))
+          .attr("y", d => y(d.scorePositifMean))
+          .attr("width", x.bandwidth() / 4) // Diviser par 4 pour avoir des barres côte à côte
+          .attr("height", d => height - y(d.scorePositifMean));
+
+        // Ajouter les barres pour le score négatif moyen
+        svg.selectAll(".bar.negatif")
+          .data(dataArray)
+          .enter().append("rect")
+          .attr("class", "bar negatif")
+          .attr("x", d => x(d.key) + x.bandwidth() / 4) // Décaler de la moitié de la largeur de la bande
+          .attr("y", d => y(d.scoreNegatifMean))
+          .attr("width", x.bandwidth() / 4) // Diviser par 4 pour avoir des barres côte à côte
+          .attr("height", d => height - y(d.scoreNegatifMean));
+
+        svg.append("g")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x))
+          .selectAll("text")
+          .attr("transform", "rotate(-45)")
+          .style("text-anchor", "end");
+
+        svg.append("g")
+          .call(d3.axisLeft(y))
+          .append("text")
+          .attr("fill", "#000")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 6)
+          .attr("dy", "0.71em")
+          .attr("text-anchor", "end")
+          .text("Scores");
+
+        // Créer la légende
+        var legend = svg.selectAll(".legend")
+          .data(["scorePositifMean", "scoreNegatifMean"])
+          .enter().append("g")
+          .attr("class", "legend")
+          .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
+
+        legend.append("rect")
+          .attr("x", width - 18)
+          .attr("width", 18)
+          .attr("height", 18)
+          .style("fill", color);
+
+        legend.append("text")
+          .attr("x", width - 24)
+          .attr("y", 9)
+          .attr("dy", ".35em")
+          .style("text-anchor", "end")
+          .text(d => (d == "scorePositifMean" ? "Pour le soja" : "Contre le soja"));
+      }
+
+      // Appeler la fonction pour mettre à jour le graphique au chargement de la page
+      updateGraph();
+
+      // Ajouter un écouteur d'événement pour les changements de la variable sélectionnée
+      document.querySelectorAll('input[name="variable"]').forEach(checkbox => {
+        checkbox.addEventListener("change", function() {
+          // Mettre à jour le graphique lorsqu'une variable est sélectionnée
+          updateGraph();
+        });
+      });
+    }).catch(function(error) {
+      console.error('Erreur lors du chargement du fichier JSON:', error);
+    });
+  </script>
+</body>
+</html>
