@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation des données</title>
+  <!-- Ajouter la balise script pour D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+<div>
+  <h2>Indice de mécontentement pour ceux qui font de la ccueillette et ceux qui cultivent </h2>
+  <input type="radio" id="cueillette" name="culture" value="cueillette" checked>
+  <label for="cueillette">Cueillette</label>
+  <input type="radio" id="type-culture" name="culture" value="type-culture">
+  <label for="type-culture">Type de culture</label>
+</div>
+
+<div id="chart"></div>
+
+<script>
+  d3.json("data.json").then(function(data) {
+    // Fonction pour filtrer les données en fonction de la variable sélectionnée et la modalité 1
+    function filterData(selectedVariables) {
+      return data.filter(d => selectedVariables.some(variable => d[variable] === 1));
+    }
+
+    // Fonction pour calculer la moyenne du score_negatif pour la modalité 1
+    function calculateMean(selectedVariables) {
+      const filteredData = filterData(selectedVariables);
+      const mean = d3.mean(filteredData, d => +d.score_negatif);
+      return mean ? mean : 0;
+    }
+
+    // Fonction pour créer le graphique à barres
+    function createBarChart(selectedVariables) {
+      const chartContainer = d3.select("#chart");
+      chartContainer.selectAll("*").remove(); // Effacer le contenu précédent du conteneur
+
+      const dataToDisplay = selectedVariables.map(variable => ({
+        variable,
+        meanScore: calculateMean([variable])
+      }));
+
+      // Trier les données par moyenne de score_negatif
+      dataToDisplay.sort((a, b) => b.meanScore - a.meanScore);
+
+      const margin = {top: 20, right: 30, bottom: 40, left: 150};
+      const width = 800 - margin.left - margin.right;
+      const height = 400 - margin.top - margin.bottom;
+
+      const svg = chartContainer.append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      const x = d3.scaleLinear()
+        .domain([0, d3.max(dataToDisplay, d => d.meanScore)])
+        .range([0, width]);
+
+      const y = d3.scaleBand()
+        .domain(dataToDisplay.map(d => d.variable))
+        .range([0, height])
+        .padding(0.1);
+
+      const bars = svg.selectAll(".bar")
+        .data(dataToDisplay)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", 0)
+        .attr("y", d => y(d.variable))
+        .attr("width", d => x(d.meanScore))
+        .attr("height", y.bandwidth())
+        .attr("fill", "steelblue"); // Barres de couleur bleue
+
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+      svg.append("g")
+        .call(d3.axisLeft(y)
+          .tickFormat(function(d) {
+            // Remplacer les noms des variables par les noms spécifiés
+            switch(d) {
+              case "Q_5.3.2_Pas_de_collecte_de_produits_forestiers":
+                return "Pas de collecte"
+              case "Q_5.3.2_Produits forestiers a base de bois":
+                return "Bois";
+              case "Q_5.3.2_Produits a base de fibres forestieres":
+                return "Fibres";
+              case "Q_5.3.2_Produits_forestiers_huiles_resines":
+                return "Huile et Résines";
+              case "Q_5.3.2_Produits_fruits_forestiers":
+                return "Fruits";
+              case "Q_5.3.2_Produits_forestiers_chataignes":
+                return "Noix";
+              case "Q_5.3.2_Produits_forestiers":
+                return "Chasse";
+              case "Q_5.3.2_Produits_forestiers_peche":
+                return "Pêche";
+              case "Q_5.3.2_Produits_forestiers_autres":
+                return "Autres";
+              case "Q_5.1.2_Culture de rocailles":
+                return "Rocailles";
+              case "Q_5.1.2_culture_pasto":
+                return "Pâturage";
+              case "Q_5.1.2_horticulture":
+                return "Horticulture";
+              case "Q_5.1.2_Culture_d'autres_plantes_de_monoculture":
+                return "Autres cultures ou monocultures";
+              case "Q_5.1.2_culture_cour_productive":
+                return "Jardin ou potager productif";
+              case "Q_5.1.2_consortium_crop_SAF":
+                return "Agroforestiers";
+              default:
+                return d;
+            }
+          })
+        );
+    }
+
+    // Sélectionner le bouton radio et mettre à jour le graphique lorsqu'un changement est détecté
+    d3.selectAll('input[name="culture"]').on("change", function() {
+      const selectedCulture = this.value;
+      let selectedVariables = [];
+
+      if (selectedCulture === "cueillette") {
+        selectedVariables = [
+          "Q_5.3.2_Produits forestiers a base de bois",
+          "Q_5.3.2_Produits a base de fibres forestieres",
+          "Q_5.3.2_Produits_forestiers_huiles_resines",
+          "Q_5.3.2_Produits_fruits_forestiers",
+          "Q_5.3.2_Produits_forestiers_chataignes",
+          "Q_5.3.2_Produits_forestiers",
+          "Q_5.3.2_Produits_forestiers_peche",
+          "Q_5.3.2_Produits_forestiers_autres",
+          "Q_5.3.2_Pas_de_collecte_de_produits_forestiers"
+        ];
+      } else if (selectedCulture === "type-culture") {
+        selectedVariables = [
+          "Q_5.1.2_Culture de rocailles",
+          "Q_5.1.2_culture_pasto",
+          "Q_5.1.2_horticulture",
+          "Q_5.1.2_Culture_d'autres_plantes_de_monoculture",
+          "Q_5.1.2_culture_cour_productive",
+          "Q_5.1.2_consortium_crop_SAF"
+        ];
+      }
+
+      createBarChart(selectedVariables);
+    });
+
+    // Initialiser le graphique avec toutes les variables sélectionnées par défaut
+    createBarChart([
+      "Q_5.3.2_Produits forestiers a base de bois",
+      "Q_5.3.2_Produits a base de fibres forestieres",
+      "Q_5.3.2_Produits_forestiers_huiles_resines",
+      "Q_5.3.2_Produits_fruits_forestiers",
+      "Q_5.3.2_Produits_forestiers_chataignes",
+      "Q_5.3.2_Produits_forestiers",
+      "Q_5.3.2_Produits_forestiers_peche",
+      "Q_5.3.2_Produits_forestiers_autres",
+      "Q_5.3.2_Pas_de_collecte_de_produits_forestiers"
+    ]);
+  });
+</script>
+
+</body>
+</html>
