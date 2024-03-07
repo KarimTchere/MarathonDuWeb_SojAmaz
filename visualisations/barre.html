@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation des données</title>
+  <!-- Ajouter la balise script pour D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    .bar {
+      fill: steelblue;
+    }
+    .bar:hover {
+      fill: orange;
+    }
+    .modalite-label {
+      font-size: 10px;
+      text-anchor: middle;
+    }
+  </style>
+</head>
+
+<body>
+    Évaluation de l'Indice de Mécontentement
+    <div id="chart"></div>
+    <form>
+      <input type="radio" id="variable1" name="variable" value="Q_5.3.2_cueillette_produits_forestiers" checked> Cueillette Produits Forestiers
+      <input type="radio" id="variable2" name="variable" value="Q_5.1.2_type_culture"> Type de Culture
+      <input type="radio" id="variable3" name="variable" value="Q_3.3.2_temps_communautes"> Temps dans les Communautés
+    </form>
+  
+    <script>
+      d3.json("data.json").then(function(data) {
+        // Fonction pour filtrer les données en fonction de la variable sélectionnée
+        function filterData(selectedVariable) {
+          return data.filter(d => d[selectedVariable] !== "" && d[selectedVariable] !== " ");
+        }
+  
+        // Fonction pour regrouper les données par modalité et calculer la moyenne du score_negatif
+        function processData(selectedVariable) {
+          let groupedData = {};
+          filterData(selectedVariable).forEach(d => {
+            if (!groupedData[d[selectedVariable]]) {
+              groupedData[d[selectedVariable]] = [];
+            }
+            groupedData[d[selectedVariable]].push(+d.score_negatif);
+          });
+          return Object.keys(groupedData).map(key => ({
+            modalite: key,
+            moyenne_score_negatif: d3.mean(groupedData[key])
+          }));
+        }
+  
+        // Initialiser le graphique
+        const svg = d3.select("#chart")
+                    .append("svg")
+                    .attr("width", 500)
+                    .attr("height", 300);
+        
+        // Mettre à jour le graphique en fonction de la variable sélectionnée
+        function updateChart(selectedVariable) {
+          const processedData = processData(selectedVariable);
+          
+          // Trier les données par moyenne_score_negatif de manière décroissante
+          processedData.sort((a, b) => b.moyenne_score_negatif - a.moyenne_score_negatif);
+          
+          const yScale = d3.scaleBand()
+                          .domain(processedData.map(d => d.modalite))
+                          .range([30, 250])
+                          .padding(0.1);
+          
+          const xScale = d3.scaleLinear()
+                          .domain([0, d3.max(processedData, d => d.moyenne_score_negatif)])
+                          .range([50, 450]);
+      
+          const bars = svg.selectAll(".bar")
+                          .data(processedData);
+      
+          bars.enter()
+              .append("rect")
+              .attr("class", "bar")
+              .merge(bars)
+              .attr("x", 50)
+              .attr("y", d => yScale(d.modalite))
+              .attr("width", d => xScale(d.moyenne_score_negatif) - 50)
+              .attr("height", yScale.bandwidth());
+      
+          bars.exit().remove();
+      
+          // Mettre à jour l'axe des abscisses
+          svg.selectAll(".x-axis").remove();
+          svg.append("g")
+              .attr("class", "x-axis")
+              .attr("transform", "translate(0,250)")
+              .call(d3.axisBottom(xScale));
+
+          // Mettre à jour les infobulles
+          svg.selectAll("title").remove();
+          bars.append("title")
+              .text(d => d.modalite);
+        }
+  
+        // Mettre à jour le graphique avec la variable par défaut
+        updateChart("Q_5.3.2_cueillette_produits_forestiers");
+  
+        // Ajouter un écouteur d'événements pour les sélecteurs radio
+        d3.selectAll('input[name="variable"]').on("change", function() {
+          const selectedVariable = this.value;
+          updateChart(selectedVariable);
+        });
+      });
+
+
+      
+    </script>
+  </body>
+
+  
+</html>
