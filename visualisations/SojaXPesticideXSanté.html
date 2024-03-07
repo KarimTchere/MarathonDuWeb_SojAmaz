@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"> </script>
+		<meta charset="UTF-8" />
+		<title>SojaXEauXClimat</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js" integrity="sha512-M7nHCiNUOwFt6Us3r8alutZLm9qMt4s9951uo8jqO4UwJ1hziseL6O3ndFyigx6+LREfZqnhHxYjKRJ8ZQ69DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	</head>
+	<script type="text/javascript">
+    function rand(mi,ma){
+      return Math.floor(Math.random() * (ma - mi) ) + mi;
+    }
+		// Utilisez d3.json() pour charger les données depuis le fichier JSON
+		var color = d3.scaleOrdinal(d3.schemeCategory10);
+    d3.json("SojaXPesticideXSanté_json.json").then(function(graph) {
+      var links = svg.selectAll(".links")
+        .data(graph.links)
+        .enter().append("line");      
+      var nodes = svg.selectAll(".node")
+        .data(graph.nodes)
+        .enter().append("circle");
+      nodes.attr("stroke", "#aaaaaa")
+        .attr("r", 5)
+        .attr("id", function(d) { return "node"+d.id; } )
+        /*
+        .attr("cx", function(d) { return rand(1, w); } )
+        .attr("cy", function(d) { return rand(1, h); } )*/
+        .attr("fill", function(d) { return color(d.group); });
+        links.attr("stroke", "#aaaaaa")
+        .attr("stroke-width",(function(d) {return Math.sqrt(d.value);}))
+        .attr("stroke-opacity", '0.6' )
+        /*.attr("x1",function(d){return d3.select("#node"+d.source).attr("cx");})
+        .attr("y1",function(d){return d3.select("#node"+d.source).attr("cy");})
+        .attr("x2",function(d){return d3.select("#node"+d.target).attr("cx");})
+        .attr("y2",function(d){return d3.select("#node"+d.target).attr("cy");}); 
+      */
+        var forceDirectedLayout = d3.forceSimulation()
+        .nodes(graph.nodes)
+        .force("repulsion", d3.forceManyBody())
+        .force("attraction", d3.forceLink(graph.links))
+        .force("center", d3.forceCenter(w / 2, h / 2));
+        forceDirectedLayout.on("tick", function() {
+        links
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+        nodes
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+        });
+        graph.nodes.append("title").text(function(d) { return d.name; });
+      });
+	</script>
+	<body>
+    <script type="text/javascript">
+      var w = 800;
+      var h =500;
+      var svg = d3.select("body").append("svg")
+      .attr("width", w)
+      .attr("height", h);
+    </script>
+		<!-- Ajoutez un conteneur SVG pour le nuage de points -->
+
+	</body>
+  
+</html>
