@@ -1,0 +1,1922 @@
+[
+  {
+    "modalite": "Q_9.4.1.3_quand_changements_lies_soja_Il en est ainsi depuis 15 ans_  il s'est developpe au cours des 10 dernieres annees c",
+    "moyen_negatif": -0.636363636,
+    "moyen_positif": 0,
+    "nb_occurence": 1
+  },
+  {
+    "modalite": "Q_7.2.2_revenu_agricole_mois_difficile_Plus de 3 salaires minimums",
+    "moyen_negatif": -0.545454545,
+    "moyen_positif": 0,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_9.5.2_future5ans_voudrait_quitter_la_ville",
+    "moyen_negatif": -0.454545455,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 9
+  },
+  {
+    "modalite": "Q_7.6.2_Les techniciens syndicaux",
+    "moyen_negatif": -0.424242424,
+    "moyen_positif": 0.222222222,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_7.5.1.2_Type de financement du credit aux menages",
+    "moyen_negatif": -0.393939394,
+    "moyen_positif": 0,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_4.1.2.1_autonome",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0.155555556,
+    "nb_occurence": 15
+  },
+  {
+    "modalite": "Q_3.4.2_emploi_agricole",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0.133333333,
+    "nb_occurence": 5
+  },
+  {
+    "modalite": "Q_4.1.2.1_autre_0_parent",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0,
+    "nb_occurence": 5
+  },
+  {
+    "modalite": "Q_7.1.1.3_certification",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0,
+    "nb_occurence": 5
+  },
+  {
+    "modalite": "Q_3.4.2_emploi_communautaire",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0.111111111,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_7.5.1.2_Type_de_financement_Pronaf_custeio",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_9.4.2.3_Vous_ne_savez_pas_comment_les_agrotoxiques_vous_affectent",
+    "moyen_negatif": -0.363636364,
+    "moyen_positif": 0,
+    "nb_occurence": 1
+  },
+  {
+    "modalite": "Q_2.2.1_zona_B1 Centro",
+    "moyen_negatif": -0.346889952,
+    "moyen_positif": 0.052631579,
+    "nb_occurence": 38
+  },
+  {
+    "modalite": "Q_9.4.2.3_Comment les agrotoxiques affectent-ils la pollinisation ?",
+    "moyen_negatif": -0.344155844,
+    "moyen_positif": 0.095238095,
+    "nb_occurence": 14
+  },
+  {
+    "modalite": "Q_9.4.1.3_quand_changements_lies_soja_Il ne peut pas dire",
+    "moyen_negatif": -0.340909091,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_9.4.1.3_Les_changements_lies_aux_feves_de_soja_que_vous_ne_pouvez_pas_dire",
+    "moyen_negatif": -0.340909091,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_9.5.1_enfants_veulent_continuer_leur_activite_agricole_Sans objet (si vous n'avez pas d'enfant)",
+    "moyen_negatif": -0.330143541,
+    "moyen_positif": 0.087719298,
+    "nb_occurence": 19
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_liens_sociaux_La situation a empire",
+    "moyen_negatif": -0.327922078,
+    "moyen_positif": 0.071428571,
+    "nb_occurence": 28
+  },
+  {
+    "modalite": "Q_2.2.1_zona_S2 Início da Curuá Una",
+    "moyen_negatif": -0.32688588,
+    "moyen_positif": 0.04964539,
+    "nb_occurence": 47
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte_a_commercialiser_a_negocier_un_attracteur",
+    "moyen_negatif": -0.326203209,
+    "moyen_positif": 0.176470588,
+    "nb_occurence": 17
+  },
+  {
+    "modalite": "Q_7.2.2_revenu_agricole_mois_difficile_Plus de 1 a 3 salaires minimums",
+    "moyen_negatif": -0.318181818,
+    "moyen_positif": 0.125,
+    "nb_occurence": 8
+  },
+  {
+    "modalite": "Q_6.1.2_emploi_main_d'oeuvre_Pas de reponse",
+    "moyen_negatif": -0.318181818,
+    "moyen_positif": 0.5,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire des intrants",
+    "moyen_negatif": -0.313131313,
+    "moyen_positif": 0.055555556,
+    "nb_occurence": 18
+  },
+  {
+    "modalite": "Q_3.4.2_buses_de_ville",
+    "moyen_negatif": -0.313131313,
+    "moyen_positif": 0,
+    "nb_occurence": 9
+  },
+  {
+    "modalite": "Q_9.4.2.3_Comment les agrotoxines affectent le sechage des cultures",
+    "moyen_negatif": -0.312805474,
+    "moyen_positif": 0.086021505,
+    "nb_occurence": 93
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_Bien",
+    "moyen_negatif": -0.30976431,
+    "moyen_positif": 0.024691358,
+    "nb_occurence": 27
+  },
+  {
+    "modalite": "Q_3.4.2_autres",
+    "moyen_negatif": -0.303030303,
+    "moyen_positif": 0.055555556,
+    "nb_occurence": 30
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_des_contaminations_agrotoxiques",
+    "moyen_negatif": -0.301435407,
+    "moyen_positif": 0.122807018,
+    "nb_occurence": 19
+  },
+  {
+    "modalite": "Q_4.5.1_revenu_travail_exterieur_Jusqu'a un salaire minimum",
+    "moyen_negatif": -0.299014239,
+    "moyen_positif": 0.072289157,
+    "nb_occurence": 83
+  },
+  {
+    "modalite": "Q_3.4.2_Vente_de_produits",
+    "moyen_negatif": -0.298701299,
+    "moyen_positif": 0.285714286,
+    "nb_occurence": 7
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_a_porte_atteinte_a_la_sante_familiale",
+    "moyen_negatif": -0.298395722,
+    "moyen_positif": 0.082352941,
+    "nb_occurence": 85
+  },
+  {
+    "modalite": "Q_7.2.1_revenu_agricole_bon_mois_Vous ne savez pas",
+    "moyen_negatif": -0.296650718,
+    "moyen_positif": 0.083333333,
+    "nb_occurence": 76
+  },
+  {
+    "modalite": "Q_4.4.1_participer_au_football_de_club_Leadership",
+    "moyen_negatif": -0.296442688,
+    "moyen_positif": 0.072463768,
+    "nb_occurence": 23
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_production_agricole_mauvais",
+    "moyen_negatif": -0.29585327,
+    "moyen_positif": 0.073099415,
+    "nb_occurence": 114
+  },
+  {
+    "modalite": "Q_9.3.1.5_Dry_well_sources",
+    "moyen_negatif": -0.295454545,
+    "moyen_positif": 0.020833333,
+    "nb_occurence": 32
+  },
+  {
+    "modalite": "Q_9.3.1_Autres_changements_climatiques",
+    "moyen_negatif": -0.295454545,
+    "moyen_positif": 0.020833333,
+    "nb_occurence": 16
+  },
+  {
+    "modalite": "Q_7.6.3_frequence_visites_Moins d'une fois par an",
+    "moyen_negatif": -0.295454545,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_4.5.1_revenu_travail_exterieur_Vous ne savez pas",
+    "moyen_negatif": -0.290909091,
+    "moyen_positif": 0.080952381,
+    "nb_occurence": 70
+  },
+  {
+    "modalite": "Q_7.2.1_revenu_agricole_bon_mois_Plus de 3 salaires minimums",
+    "moyen_negatif": -0.290909091,
+    "moyen_positif": 0.155555556,
+    "nb_occurence": 15
+  },
+  {
+    "modalite": "Q_9.4.2.4_Probleme_de_sante_pulverisations_maux_de_tete_constants",
+    "moyen_negatif": -0.288916563,
+    "moyen_positif": 0.063926941,
+    "nb_occurence": 73
+  },
+  {
+    "modalite": "Q_3.4.2_rural_zone_days",
+    "moyen_negatif": -0.288311688,
+    "moyen_positif": 0.047619048,
+    "nb_occurence": 35
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_liens_sociaux_mauvais",
+    "moyen_negatif": -0.287878788,
+    "moyen_positif": 0.148148148,
+    "nb_occurence": 18
+  },
+  {
+    "modalite": "Q_2.2.1_zona_B2 Trevo",
+    "moyen_negatif": -0.287190083,
+    "moyen_positif": 0.151515152,
+    "nb_occurence": 44
+  },
+  {
+    "modalite": "Q_9.4.2.4_Probleme_de_sante_pulverisations_autres",
+    "moyen_negatif": -0.286363636,
+    "moyen_positif": 0.15,
+    "nb_occurence": 20
+  },
+  {
+    "modalite": "Q_9.5.1.2_Les_enfants_restent-ils_dans_une_communaute_rurale ?",
+    "moyen_negatif": -0.285714286,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 14
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_Diplome d'etudes secondaires",
+    "moyen_negatif": -0.283267457,
+    "moyen_positif": 0.077294686,
+    "nb_occurence": 69
+  },
+  {
+    "modalite": "Q_9.4.2.4_Probleme_de_sante_pulverisations_0_sei",
+    "moyen_negatif": -0.282828283,
+    "moyen_positif": 0.12037037,
+    "nb_occurence": 36
+  },
+  {
+    "modalite": "Q_9.4.2.3_Comment les agrotoxiques affectent les ravageurs qui envahissent les cultures",
+    "moyen_negatif": -0.28262214,
+    "moyen_positif": 0.083900227,
+    "nb_occurence": 147
+  },
+  {
+    "modalite": "Q_8.4.1_nouvelles_terres_1, j'en ai herite",
+    "moyen_negatif": -0.28030303,
+    "moyen_positif": 0.027777778,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_3.3.2_temps_communautes_Moins de 5 ans",
+    "moyen_negatif": -0.27972028,
+    "moyen_positif": 0.051282051,
+    "nb_occurence": 26
+  },
+  {
+    "modalite": "Q_7.6.3_frequence_visites_Tous les trois mois",
+    "moyen_negatif": -0.279220779,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 14
+  },
+  {
+    "modalite": "Q_3.4.2_retraites",
+    "moyen_negatif": -0.278787879,
+    "moyen_positif": 0.105555556,
+    "nb_occurence": 60
+  },
+  {
+    "modalite": "Q_6.1.4.2_defensifs_naturels_Tous les 2-3 mois",
+    "moyen_negatif": -0.278592375,
+    "moyen_positif": 0.075268817,
+    "nb_occurence": 31
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_acteurs_exterieurs_La situation a empire",
+    "moyen_negatif": -0.276988636,
+    "moyen_positif": 0.0625,
+    "nb_occurence": 64
+  },
+  {
+    "modalite": "Q_9.6.3_situation_agricole_familiale_Il ne changera pas",
+    "moyen_negatif": -0.276737968,
+    "moyen_positif": 0.053921569,
+    "nb_occurence": 68
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_manque_de_travail",
+    "moyen_negatif": -0.276537833,
+    "moyen_positif": 0.081836327,
+    "nb_occurence": 167
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire des i0dations",
+    "moyen_negatif": -0.276094276,
+    "moyen_positif": 0.061728395,
+    "nb_occurence": 27
+  },
+  {
+    "modalite": "Q_7.2.2_revenu_agricole_mois_difficile_Vous ne savez pas",
+    "moyen_negatif": -0.275826446,
+    "moyen_positif": 0.098484848,
+    "nb_occurence": 88
+  },
+  {
+    "modalite": "Q_9.4.2.3_Comment les agrotoxiques vous affectent-ils ?",
+    "moyen_negatif": -0.274904736,
+    "moyen_positif": 0.079840319,
+    "nb_occurence": 167
+  },
+  {
+    "modalite": "Q_9.4.1.3_Les_changements_lies_au_seigle_ont_augmente_au_cours_de_10_annees",
+    "moyen_negatif": -0.274661509,
+    "moyen_positif": 0.089834515,
+    "nb_occurence": 141
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Reçu d'achat",
+    "moyen_negatif": -0.274229902,
+    "moyen_positif": 0.068870523,
+    "nb_occurence": 121
+  },
+  {
+    "modalite": "Q_9.4.1.3_quand_changements_lies_soja_Elle s'est developpee au cours des dix dernieres annees",
+    "moyen_negatif": -0.274044796,
+    "moyen_positif": 0.089371981,
+    "nb_occurence": 138
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte a commercialiser l'assistance technique",
+    "moyen_negatif": -0.273822563,
+    "moyen_positif": 0.048192771,
+    "nb_occurence": 83
+  },
+  {
+    "modalite": "Q_8.5.1_evenement de terrain",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0.092198582,
+    "nb_occurence": 47
+  },
+  {
+    "modalite": "Q_2.2.1_zona_S3 Final da Curuá Una",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0.066666667,
+    "nb_occurence": 45
+  },
+  {
+    "modalite": "Q_5.3.2_Produits_forestiers_autres",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0.022222222,
+    "nb_occurence": 15
+  },
+  {
+    "modalite": "Q_7.2.1_revenu_agricole_bon_mois_Rien",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0.076923077,
+    "nb_occurence": 13
+  },
+  {
+    "modalite": "Q_6.1.4.3_herbicide_Tous les mois",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0.121212121,
+    "nb_occurence": 11
+  },
+  {
+    "modalite": "Q_6.2.1.2_Utilisation_de_produits_chimiques_pour_controler_les_nuisibles_autres",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0.148148148,
+    "nb_occurence": 10
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_Igarape Poço",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_4.4.1_participe_groupe_femmes_Leadership",
+    "moyen_negatif": -0.272727273,
+    "moyen_positif": 0,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communautaire_sante_mauvais",
+    "moyen_negatif": -0.271523179,
+    "moyen_positif": 0.081677704,
+    "nb_occurence": 151
+  },
+  {
+    "modalite": "Q_9.4.1_Changes_apres_soja_Il ne peut pas dire",
+    "moyen_negatif": -0.270944742,
+    "moyen_positif": 0.071895425,
+    "nb_occurence": 51
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_relations_autres_acteurs_dont_soja_mauvais",
+    "moyen_negatif": -0.270707071,
+    "moyen_positif": 0.066666667,
+    "nb_occurence": 90
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_a_porte_des_blessures_aux_autres",
+    "moyen_negatif": -0.269592476,
+    "moyen_positif": 0.045977011,
+    "nb_occurence": 29
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_a_apporte_des_dommages_au_changement_climatique",
+    "moyen_negatif": -0.269576958,
+    "moyen_positif": 0.069306931,
+    "nb_occurence": 203
+  },
+  {
+    "modalite": "Q_9.5.1_enfants_veulent_continuer_leur_activite_agricole_0",
+    "moyen_negatif": -0.269430052,
+    "moyen_positif": 0.065630397,
+    "nb_occurence": 193
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_pouvoirs_publics_La situation a empire",
+    "moyen_negatif": -0.26895902,
+    "moyen_positif": 0.081174439,
+    "nb_occurence": 193
+  },
+  {
+    "modalite": "Q_2.2_municipe_Belterra",
+    "moyen_negatif": -0.268799102,
+    "moyen_positif": 0.088477366,
+    "nb_occurence": 162
+  },
+  {
+    "modalite": "Q_9.4.2_atteint_pour_la_pulverisation_des_pesticides",
+    "moyen_negatif": -0.268435427,
+    "moyen_positif": 0.084406295,
+    "nb_occurence": 233
+  },
+  {
+    "modalite": "Q_7.4.1_Pas_de_difficulte_a_produire",
+    "moyen_negatif": -0.268398268,
+    "moyen_positif": 0.071428571,
+    "nb_occurence": 42
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_a_endommage_l'environnement",
+    "moyen_negatif": -0.267045455,
+    "moyen_positif": 0.085069444,
+    "nb_occurence": 193
+  },
+  {
+    "modalite": "Q_9.6.3_situation_soja_si_continue_Il ne changera pas",
+    "moyen_negatif": -0.265800866,
+    "moyen_positif": 0.073015873,
+    "nb_occurence": 105
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_pouvoirs_publics_moyen",
+    "moyen_negatif": -0.265673981,
+    "moyen_positif": 0.08045977,
+    "nb_occurence": 117
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_sante_La situation a empire",
+    "moyen_negatif": -0.265533028,
+    "moyen_positif": 0.079136691,
+    "nb_occurence": 140
+  },
+  {
+    "modalite": "Q_8.5.2_refu_proposition_achat_refuse",
+    "moyen_negatif": -0.265332753,
+    "moyen_positif": 0.090909091,
+    "nb_occurence": 209
+  },
+  {
+    "modalite": "Q_6.2.1.2_Utilisation_des_produits_chimiques_pour_controler_les_nuisibles_de_l'environnement",
+    "moyen_negatif": -0.26446281,
+    "moyen_positif": 0.151515152,
+    "nb_occurence": 11
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja a entraîne une perte de production",
+    "moyen_negatif": -0.264166327,
+    "moyen_positif": 0.071748879,
+    "nb_occurence": 224
+  },
+  {
+    "modalite": "Q_9.6.3_situation_communaute_si_continue_La situation va empirer",
+    "moyen_negatif": -0.263888889,
+    "moyen_positif": 0.071759259,
+    "nb_occurence": 144
+  },
+  {
+    "modalite": "Q_9.3.1_Changement_du_climat_moins_d'humidite_de_l'air",
+    "moyen_negatif": -0.263636364,
+    "moyen_positif": 0.088888889,
+    "nb_occurence": 60
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Autres",
+    "moyen_negatif": -0.263636364,
+    "moyen_positif": 0.1,
+    "nb_occurence": 20
+  },
+  {
+    "modalite": "Q_4.4.1_participer_au_groupe_jeunes_Leadership",
+    "moyen_negatif": -0.263636364,
+    "moyen_positif": 0.033333333,
+    "nb_occurence": 10
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_sante_C'est la meme chose",
+    "moyen_negatif": -0.262445887,
+    "moyen_positif": 0.089285714,
+    "nb_occurence": 168
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_production_agricole_C'est la meme chose",
+    "moyen_negatif": -0.261682243,
+    "moyen_positif": 0.073208723,
+    "nb_occurence": 214
+  },
+  {
+    "modalite": "Q_6.1.4.2_Insecticides_chimiques_Tous les mois",
+    "moyen_negatif": -0.261121857,
+    "moyen_positif": 0.085106383,
+    "nb_occurence": 47
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_une_faible_degradation_des_sols",
+    "moyen_negatif": -0.260469867,
+    "moyen_positif": 0.082397004,
+    "nb_occurence": 89
+  },
+  {
+    "modalite": "Q_7.4.2_Pas_de_difficultes_de_commercialisation",
+    "moyen_negatif": -0.260188088,
+    "moyen_positif": 0.091954023,
+    "nb_occurence": 87
+  },
+  {
+    "modalite": "Q_9.6.3_situation_communaute_si_continue_Il ne changera pas",
+    "moyen_negatif": -0.259855189,
+    "moyen_positif": 0.079646018,
+    "nb_occurence": 113
+  },
+  {
+    "modalite": "Q_3.3.2_temps_communautes_Plus de 30 ans",
+    "moyen_negatif": -0.259662493,
+    "moyen_positif": 0.091816367,
+    "nb_occurence": 168
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_education_La situation a empire",
+    "moyen_negatif": -0.259469697,
+    "moyen_positif": 0.104166667,
+    "nb_occurence": 48
+  },
+  {
+    "modalite": "Q_9.5.2_future5ans_continuer_mais_sans_investir",
+    "moyen_negatif": -0.259314456,
+    "moyen_positif": 0.076502732,
+    "nb_occurence": 61
+  },
+  {
+    "modalite": "Q_4.1.2.1_petit-fils",
+    "moyen_negatif": -0.259213759,
+    "moyen_positif": 0.072072072,
+    "nb_occurence": 74
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_apporte_une_mauvaise_qualite_de_l'eau",
+    "moyen_negatif": -0.259090909,
+    "moyen_positif": 0.054166667,
+    "nb_occurence": 80
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_education_moyen",
+    "moyen_negatif": -0.259050684,
+    "moyen_positif": 0.081120944,
+    "nb_occurence": 226
+  },
+  {
+    "modalite": "Q_6.1.4.2_Insecticides_chimiques_1 ou 2 fois par an",
+    "moyen_negatif": -0.257792208,
+    "moyen_positif": 0.097619048,
+    "nb_occurence": 140
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte_d'acces_aux_marches_du_commerce",
+    "moyen_negatif": -0.257668712,
+    "moyen_positif": 0.073619632,
+    "nb_occurence": 163
+  },
+  {
+    "modalite": "Q_6.1.2_emploi_main_d'oeuvre_Plusieurs fois par semaine",
+    "moyen_negatif": -0.257575758,
+    "moyen_positif": 0.063492063,
+    "nb_occurence": 42
+  },
+  {
+    "modalite": "Q_6.1.4.3_herbicide_Tous les 2-3 mois",
+    "moyen_negatif": -0.257575758,
+    "moyen_positif": 0.077777778,
+    "nb_occurence": 30
+  },
+  {
+    "modalite": "Q_9.4.2.4_Probleme_de_sante_pulverisations_maladie_du_poumon",
+    "moyen_negatif": -0.257575758,
+    "moyen_positif": 0.111111111,
+    "nb_occurence": 24
+  },
+  {
+    "modalite": "Q_3.4.2_proprietaire de l'entreprise",
+    "moyen_negatif": -0.257575758,
+    "moyen_positif": 0,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_Enseignement superieur acheve",
+    "moyen_negatif": -0.257575758,
+    "moyen_positif": 0.111111111,
+    "nb_occurence": 6
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_pouvoirs_publics_mauvais",
+    "moyen_negatif": -0.257525084,
+    "moyen_positif": 0.07580825,
+    "nb_occurence": 299
+  },
+  {
+    "modalite": "Q_6.2.1_Produits_chimiques_Jamais utilise",
+    "moyen_negatif": -0.257362356,
+    "moyen_positif": 0.075117371,
+    "nb_occurence": 213
+  },
+  {
+    "modalite": "Q_4.5.1_revenu_travail_exterieur_Plus de 1 a 3 salaires minimums",
+    "moyen_negatif": -0.257206208,
+    "moyen_positif": 0.089430894,
+    "nb_occurence": 41
+  },
+  {
+    "modalite": "Q_6.1.4.2_defensifs_naturels_Tous les mois",
+    "moyen_negatif": -0.256916996,
+    "moyen_positif": 0.072463768,
+    "nb_occurence": 23
+  },
+  {
+    "modalite": "Q_4.4.1_participer_a_la_communaute_associative_Participer",
+    "moyen_negatif": -0.256396298,
+    "moyen_positif": 0.081836327,
+    "nb_occurence": 167
+  },
+  {
+    "modalite": "Q_7.5.1.2_Type_financement_autre",
+    "moyen_negatif": -0.256363636,
+    "moyen_positif": 0.1,
+    "nb_occurence": 51
+  },
+  {
+    "modalite": "Q_8.4.1_nouvelles_terres_1, je l'ai reçu d'une institution (INCRA, autre)",
+    "moyen_negatif": -0.256198347,
+    "moyen_positif": 0.121212121,
+    "nb_occurence": 11
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_production_agricole_La situation a empire",
+    "moyen_negatif": -0.256072172,
+    "moyen_positif": 0.06870229,
+    "nb_occurence": 131
+  },
+  {
+    "modalite": "Q_9.3.1.4_assechement_source",
+    "moyen_negatif": -0.255892256,
+    "moyen_positif": 0.069958848,
+    "nb_occurence": 81
+  },
+  {
+    "modalite": "Q_5.3.2_Pas_de_collecte_de_produits_forestiers",
+    "moyen_negatif": -0.255785124,
+    "moyen_positif": 0.072727273,
+    "nb_occurence": 220
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_transport_route_Amelioree",
+    "moyen_negatif": -0.255485893,
+    "moyen_positif": 0.074712644,
+    "nb_occurence": 291
+  },
+  {
+    "modalite": "Q_9.6.3_situation_soja_si_continue_Vous ne savez pas",
+    "moyen_negatif": -0.255319149,
+    "moyen_positif": 0.106382979,
+    "nb_occurence": 47
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_route_transport_moyen",
+    "moyen_negatif": -0.254654984,
+    "moyen_positif": 0.086345382,
+    "nb_occurence": 166
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_route_transport_bon",
+    "moyen_negatif": -0.254651781,
+    "moyen_positif": 0.083820663,
+    "nb_occurence": 172
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_a_porte_des_dommages_aux_difficultes_d'acces_au_lot",
+    "moyen_negatif": -0.254545455,
+    "moyen_positif": 0.116666667,
+    "nb_occurence": 20
+  },
+  {
+    "modalite": "Q_9.4.1_Changes_apres_soja_1, je sais que ça fait mal",
+    "moyen_negatif": -0.253842776,
+    "moyen_positif": 0.076489533,
+    "nb_occurence": 415
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Titularisation",
+    "moyen_negatif": -0.253475936,
+    "moyen_positif": 0.084313725,
+    "nb_occurence": 171
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire des ressources financieres",
+    "moyen_negatif": -0.253377145,
+    "moyen_positif": 0.06291834,
+    "nb_occurence": 249
+  },
+  {
+    "modalite": "Q_9.3.1_changement_climatique_deplacement_periode_pluviale",
+    "moyen_negatif": -0.253134796,
+    "moyen_positif": 0.091954023,
+    "nb_occurence": 116
+  },
+  {
+    "modalite": "Q_3.4.2_employe_public",
+    "moyen_negatif": -0.252525253,
+    "moyen_positif": 0,
+    "nb_occurence": 9
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communautaire_sante_moyen",
+    "moyen_negatif": -0.252363636,
+    "moyen_positif": 0.072,
+    "nb_occurence": 250
+  },
+  {
+    "modalite": "Q_5.1.2_horticulture",
+    "moyen_negatif": -0.252319109,
+    "moyen_positif": 0.065759637,
+    "nb_occurence": 147
+  },
+  {
+    "modalite": "Q_3.1.3_genre_Homme",
+    "moyen_negatif": -0.251842752,
+    "moyen_positif": 0.076576577,
+    "nb_occurence": 296
+  },
+  {
+    "modalite": "Q_2.2_municipe_Santarem",
+    "moyen_negatif": -0.251482213,
+    "moyen_positif": 0.081521739,
+    "nb_occurence": 185
+  },
+  {
+    "modalite": "Q_9.4.1.4_Les_soja_apportent-ils_des_ameliorations_0",
+    "moyen_negatif": -0.251190723,
+    "moyen_positif": 0.071374336,
+    "nb_occurence": 439
+  },
+  {
+    "modalite": "Q_9.6.3_situation_agricole_familiale_La situation va empirer",
+    "moyen_negatif": -0.25094697,
+    "moyen_positif": 0.086805556,
+    "nb_occurence": 289
+  },
+  {
+    "modalite": "Q_9.3.1_Changements_climatiques_augmentation_des_temperatures_chaudes",
+    "moyen_negatif": -0.250916811,
+    "moyen_positif": 0.079263977,
+    "nb_occurence": 472
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_liens_sociaux_bon",
+    "moyen_negatif": -0.250153909,
+    "moyen_positif": 0.07599699,
+    "nb_occurence": 444
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte_a_commercialiser_des_transports_adequats",
+    "moyen_negatif": -0.250134481,
+    "moyen_positif": 0.078895464,
+    "nb_occurence": 169
+  },
+  {
+    "modalite": "Q_7.5.1.2_Type_financement_Pronaf_A",
+    "moyen_negatif": -0.25,
+    "moyen_positif": 0.107142857,
+    "nb_occurence": 28
+  },
+  {
+    "modalite": "Q_4.4.1_participer_a_la_cooperation_Leadership",
+    "moyen_negatif": -0.25,
+    "moyen_positif": 0.111111111,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_Enseignement superieur incomplet",
+    "moyen_negatif": -0.25,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_autres",
+    "moyen_negatif": -0.25,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources_d'eau_seche_ou_autres",
+    "moyen_negatif": -0.25,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_7.2.1_revenu_agricole_bon_mois_Entre 0,5 et 1 salaire minimum",
+    "moyen_negatif": -0.249605885,
+    "moyen_positif": 0.077071291,
+    "nb_occurence": 173
+  },
+  {
+    "modalite": "Q_8.4.1_nouvelles_terres_0",
+    "moyen_negatif": -0.249540863,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 397
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire de la temperature",
+    "moyen_negatif": -0.249216301,
+    "moyen_positif": 0.091954023,
+    "nb_occurence": 59
+  },
+  {
+    "modalite": "Q_6.1.2_emploi_main_d'oeuvre_Quelques fois par an",
+    "moyen_negatif": -0.248803828,
+    "moyen_positif": 0.093567251,
+    "nb_occurence": 57
+  },
+  {
+    "modalite": "Q_4.4.1_participer_eglise_Leadership",
+    "moyen_negatif": -0.248579545,
+    "moyen_positif": 0.09375,
+    "nb_occurence": 64
+  },
+  {
+    "modalite": "Q_4.4.1_participer_eglise_Participer",
+    "moyen_negatif": -0.24842899,
+    "moyen_positif": 0.075268817,
+    "nb_occurence": 435
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire du sec",
+    "moyen_negatif": -0.248010054,
+    "moyen_positif": 0.076804916,
+    "nb_occurence": 218
+  },
+  {
+    "modalite": "Q_7.2.2_revenu_agricole_mois_difficile_Rien",
+    "moyen_negatif": -0.247994652,
+    "moyen_positif": 0.073529412,
+    "nb_occurence": 136
+  },
+  {
+    "modalite": "Q_9.6.3_situation_soja_si_continue_Il se renforcera",
+    "moyen_negatif": -0.247959471,
+    "moyen_positif": 0.066047472,
+    "nb_occurence": 323
+  },
+  {
+    "modalite": "Q_9.5.1.2_Les_enfants_pourraient-ils_continuer_leur_activite_agricole ?",
+    "moyen_negatif": -0.247933884,
+    "moyen_positif": 0.088888889,
+    "nb_occurence": 165
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_les_autres",
+    "moyen_negatif": -0.247800587,
+    "moyen_positif": 0.075268817,
+    "nb_occurence": 63
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_acteurs_exterieurs_C'est la meme chose",
+    "moyen_negatif": -0.247673586,
+    "moyen_positif": 0.078740157,
+    "nb_occurence": 382
+  },
+  {
+    "modalite": "Q_6.1.4.2_defensifs_naturels_Jamais",
+    "moyen_negatif": -0.247648903,
+    "moyen_positif": 0.075862069,
+    "nb_occurence": 435
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_manque_d'assistance_technique",
+    "moyen_negatif": -0.246961595,
+    "moyen_positif": 0.065953654,
+    "nb_occurence": 187
+  },
+  {
+    "modalite": "Q_5.1.2_culture_pasto",
+    "moyen_negatif": -0.246753247,
+    "moyen_positif": 0.085714286,
+    "nb_occurence": 35
+  },
+  {
+    "modalite": "Q_2.2.1_zona_B4 Săo Jorge",
+    "moyen_negatif": -0.246464646,
+    "moyen_positif": 0.066666667,
+    "nb_occurence": 45
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_education_C'est la meme chose",
+    "moyen_negatif": -0.246212121,
+    "moyen_positif": 0.083333333,
+    "nb_occurence": 169
+  },
+  {
+    "modalite": "Q_6.2.1_Produits_chimiques_Utilisation",
+    "moyen_negatif": -0.245947851,
+    "moyen_positif": 0.083979328,
+    "nb_occurence": 258
+  },
+  {
+    "modalite": "Q_3.4.2_activites_agricoles",
+    "moyen_negatif": -0.245454545,
+    "moyen_positif": 0.080503145,
+    "nb_occurence": 531
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte_a_commercialiser_les normes_sanitaires",
+    "moyen_negatif": -0.245454545,
+    "moyen_positif": 0.103333333,
+    "nb_occurence": 100
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_education_Amelioree",
+    "moyen_negatif": -0.244776962,
+    "moyen_positif": 0.073498965,
+    "nb_occurence": 322
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte a commercialiser les mauvaises routes",
+    "moyen_negatif": -0.244755245,
+    "moyen_positif": 0.072649573,
+    "nb_occurence": 156
+  },
+  {
+    "modalite": "Q_5.1.2_culture_cour_productive",
+    "moyen_negatif": -0.244736842,
+    "moyen_positif": 0.074561404,
+    "nb_occurence": 381
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_Enseignement primaire incomplet",
+    "moyen_negatif": -0.244675325,
+    "moyen_positif": 0.08,
+    "nb_occurence": 350
+  },
+  {
+    "modalite": "Q_7.5.1.2_No_financing_type",
+    "moyen_negatif": -0.244552968,
+    "moyen_positif": 0.081267218,
+    "nb_occurence": 242
+  },
+  {
+    "modalite": "Q_6.1.4.2_Insecticides_chimiques_Tous les 2-3 mois",
+    "moyen_negatif": -0.244318182,
+    "moyen_positif": 0.059027778,
+    "nb_occurence": 96
+  },
+  {
+    "modalite": "Q_9.5.2_future5ans_veut_continuer_a_renforcer",
+    "moyen_negatif": -0.244306015,
+    "moyen_positif": 0.07780157,
+    "nb_occurence": 468
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_liens_sociaux_C'est la meme chose",
+    "moyen_negatif": -0.244080678,
+    "moyen_positif": 0.082529475,
+    "nb_occurence": 312
+  },
+  {
+    "modalite": "Q_9.6.3_situation_agricole_familiale_Vous ne savez pas",
+    "moyen_negatif": -0.244019139,
+    "moyen_positif": 0.070175439,
+    "nb_occurence": 57
+  },
+  {
+    "modalite": "Q_5.1.1_possede_culture",
+    "moyen_negatif": -0.243954104,
+    "moyen_positif": 0.080906149,
+    "nb_occurence": 516
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_relations_autres_acteurs_dont_soja_bon",
+    "moyen_negatif": -0.24347279,
+    "moyen_positif": 0.080738178,
+    "nb_occurence": 290
+  },
+  {
+    "modalite": "Q_4.4.1_participer_syndicat_Leadership",
+    "moyen_negatif": -0.243243243,
+    "moyen_positif": 0.108108108,
+    "nb_occurence": 38
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau seches_igarape",
+    "moyen_negatif": -0.243083004,
+    "moyen_positif": 0.108695652,
+    "nb_occurence": 46
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_pouvoirs_publics_C'est la meme chose",
+    "moyen_negatif": -0.242772553,
+    "moyen_positif": 0.076628352,
+    "nb_occurence": 262
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_en_courte_distance",
+    "moyen_negatif": -0.242424242,
+    "moyen_positif": 0.144444444,
+    "nb_occurence": 30
+  },
+  {
+    "modalite": "Q_7.6.3_frequence_visites_Tous les six mois",
+    "moyen_negatif": -0.242424242,
+    "moyen_positif": 0,
+    "nb_occurence": 15
+  },
+  {
+    "modalite": "Q_9.4.1.3_quand_changements_lies_soja_Augmentation au cours des 5 dernieres annees",
+    "moyen_negatif": -0.242094862,
+    "moyen_positif": 0.06884058,
+    "nb_occurence": 184
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte_a_produire_des_insectes_maladies_nuisibles",
+    "moyen_negatif": -0.241991342,
+    "moyen_positif": 0.080952381,
+    "nb_occurence": 210
+  },
+  {
+    "modalite": "Q_8.5.3_campagne_ne_vend_pas_ta_terre",
+    "moyen_negatif": -0.241974643,
+    "moyen_positif": 0.090999011,
+    "nb_occurence": 338
+  },
+  {
+    "modalite": "Q_4.4.1_participer_au_football_de_club_Participer",
+    "moyen_negatif": -0.241852487,
+    "moyen_positif": 0.075471698,
+    "nb_occurence": 212
+  },
+  {
+    "modalite": "Q_5.1.2_consortium_crop_SAF",
+    "moyen_negatif": -0.241685144,
+    "moyen_positif": 0.032520325,
+    "nb_occurence": 42
+  },
+  {
+    "modalite": "Q_2.2.1_zona_M1 Pólo das hortaliças",
+    "moyen_negatif": -0.241685144,
+    "moyen_positif": 0.089430894,
+    "nb_occurence": 41
+  },
+  {
+    "modalite": "Q_6.3.1_entendu_parler_agroecologie",
+    "moyen_negatif": -0.241394528,
+    "moyen_positif": 0.085760518,
+    "nb_occurence": 206
+  },
+  {
+    "modalite": "Q_3.3.2_temps_communautes_Entre 15 et 30 ans",
+    "moyen_negatif": -0.24137931,
+    "moyen_positif": 0.082758621,
+    "nb_occurence": 145
+  },
+  {
+    "modalite": "Q_6.1.4.3_herbicide_Jamais",
+    "moyen_negatif": -0.241327751,
+    "moyen_positif": 0.081140351,
+    "nb_occurence": 305
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_relations_autres_acteurs_dont_soja_moyen",
+    "moyen_negatif": -0.241285031,
+    "moyen_positif": 0.09273183,
+    "nb_occurence": 133
+  },
+  {
+    "modalite": "Q_4.4.1_participer_syndicat_Participer",
+    "moyen_negatif": -0.24099723,
+    "moyen_positif": 0.072022161,
+    "nb_occurence": 361
+  },
+  {
+    "modalite": "Q_9.5.1.2_Les_enfants_aimeraient_chercher_un_emploi_ville",
+    "moyen_negatif": -0.240994854,
+    "moyen_positif": 0.067610063,
+    "nb_occurence": 212
+  },
+  {
+    "modalite": "Q_9.4.1.3_Les_changements_lies_au_seigle_ont_augmente_au_cours_de_5_annees",
+    "moyen_negatif": -0.240957967,
+    "moyen_positif": 0.069892473,
+    "nb_occurence": 186
+  },
+  {
+    "modalite": "Q_7.2.2_revenu_agricole_mois_difficile_Jusqu'a 0,5 salaire minimum",
+    "moyen_negatif": -0.240816327,
+    "moyen_positif": 0.078911565,
+    "nb_occurence": 245
+  },
+  {
+    "modalite": "Q_7.5.1.2_Type_financement_Pronaf_B",
+    "moyen_negatif": -0.240740741,
+    "moyen_positif": 0.037037037,
+    "nb_occurence": 55
+  },
+  {
+    "modalite": "Q_9.3.1_Less_rain_climate_changement",
+    "moyen_negatif": -0.240506329,
+    "moyen_positif": 0.075949367,
+    "nb_occurence": 79
+  },
+  {
+    "modalite": "Q_9.4.1.3_Les_changements_lies_a_la_culture_du_soja_ont_ete_simultanes_de_15ans",
+    "moyen_negatif": -0.240384615,
+    "moyen_positif": 0.08974359,
+    "nb_occurence": 104
+  },
+  {
+    "modalite": "Q_2.2.1_zona_M4 PA Jabuti",
+    "moyen_negatif": -0.24025974,
+    "moyen_positif": 0.06547619,
+    "nb_occurence": 56
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_Igarape",
+    "moyen_negatif": -0.24025974,
+    "moyen_positif": 0.119047619,
+    "nb_occurence": 42
+  },
+  {
+    "modalite": "Q_4.4.1_participer_a_la_cooperation_Participer",
+    "moyen_negatif": -0.24009324,
+    "moyen_positif": 0.08974359,
+    "nb_occurence": 79
+  },
+  {
+    "modalite": "Q_9.4.2.3_Comment les agrotoxiques affectent les abeilles mortes",
+    "moyen_negatif": -0.239669421,
+    "moyen_positif": 0.181818182,
+    "nb_occurence": 11
+  },
+  {
+    "modalite": "Q_3.1.3_genre_Femme",
+    "moyen_negatif": -0.239602503,
+    "moyen_positif": 0.082321188,
+    "nb_occurence": 248
+  },
+  {
+    "modalite": "Q_5.1.2_Culture_d'autres_plantes_de_monoculture",
+    "moyen_negatif": -0.239599384,
+    "moyen_positif": 0.098870056,
+    "nb_occurence": 119
+  },
+  {
+    "modalite": "Q_5.3.2_Produits_forestiers_chataignes",
+    "moyen_negatif": -0.23880597,
+    "moyen_positif": 0.084577114,
+    "nb_occurence": 269
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_liens_sociaux_Amelioree",
+    "moyen_negatif": -0.238465053,
+    "moyen_positif": 0.075376884,
+    "nb_occurence": 199
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_education_bon",
+    "moyen_negatif": -0.238232124,
+    "moyen_positif": 0.076416337,
+    "nb_occurence": 254
+  },
+  {
+    "modalite": "Q_8.4.1_nouvelles_terres_1, je l'ai fait",
+    "moyen_negatif": -0.237967914,
+    "moyen_positif": 0.094771242,
+    "nb_occurence": 102
+  },
+  {
+    "modalite": "Q_9.4.1.4_Acredita_soja_apporte_des_ameliorations_autres",
+    "moyen_negatif": -0.237762238,
+    "moyen_positif": 0.076923077,
+    "nb_occurence": 14
+  },
+  {
+    "modalite": "Q_6.1.4.2_Insecticides_chimiques_Jamais",
+    "moyen_negatif": -0.237536657,
+    "moyen_positif": 0.077956989,
+    "nb_occurence": 249
+  },
+  {
+    "modalite": "Q_9.5.1_enfants_veulent_continuer_leur_activite_agricole_Vous ne savez pas",
+    "moyen_negatif": -0.237373737,
+    "moyen_positif": 0.12962963,
+    "nb_occurence": 90
+  },
+  {
+    "modalite": "Q_4.1.2.1_spouse_partner",
+    "moyen_negatif": -0.237113402,
+    "moyen_positif": 0.072164948,
+    "nb_occurence": 486
+  },
+  {
+    "modalite": "Q_9.4.1.3_quand_changements_lies_soja_C'est comme ça depuis 15 ans",
+    "moyen_negatif": -0.236540159,
+    "moyen_positif": 0.090614887,
+    "nb_occurence": 103
+  },
+  {
+    "modalite": "Q_5.3.2_Produits forestiers a base de bois",
+    "moyen_negatif": -0.236363636,
+    "moyen_positif": 0.044444444,
+    "nb_occurence": 15
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_transport_route_La situation a empire",
+    "moyen_negatif": -0.236214605,
+    "moyen_positif": 0.076502732,
+    "nb_occurence": 122
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_production_agricole_moyen",
+    "moyen_negatif": -0.236211487,
+    "moyen_positif": 0.076708508,
+    "nb_occurence": 239
+  },
+  {
+    "modalite": "Q_3.3.2_temps_communautes_De 5 a 15 ans",
+    "moyen_negatif": -0.23615465,
+    "moyen_positif": 0.068965517,
+    "nb_occurence": 87
+  },
+  {
+    "modalite": "Q_9.4.2.4_Probleme_de_sante_pulverisations_0_humaines",
+    "moyen_negatif": -0.235914703,
+    "moyen_positif": 0.074897119,
+    "nb_occurence": 406
+  },
+  {
+    "modalite": "Q_7.2.1_revenu_agricole_bon_mois_Jusqu'a 0,5 salaire minimum",
+    "moyen_negatif": -0.235400361,
+    "moyen_positif": 0.061810155,
+    "nb_occurence": 151
+  },
+  {
+    "modalite": "Q_9.4.1.4_Croit que_soja_a_apporte_une_meilleure_prise_en_charge_des_routes",
+    "moyen_negatif": -0.235294118,
+    "moyen_positif": 0.117647059,
+    "nb_occurence": 17
+  },
+  {
+    "modalite": "Q_9.4.1.4_Croit que_soja_a_apporte_des_ameliorations_a_l'acces_aux_intrants",
+    "moyen_negatif": -0.234848485,
+    "moyen_positif": 0.055555556,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_5.1.2_Culture de rocailles",
+    "moyen_negatif": -0.234699941,
+    "moyen_positif": 0.077705156,
+    "nb_occurence": 459
+  },
+  {
+    "modalite": "Q_3.3.2_temps_communautes_Je suis ne(e) ici/j'ai grandi ici/je suis arrive(e) ici pendant mon enfance (jusqu'a l'age de 18 ans)",
+    "moyen_negatif": -0.234654235,
+    "moyen_positif": 0.071225071,
+    "nb_occurence": 117
+  },
+  {
+    "modalite": "Q_9.6.3_situation_communaute_si_continue_Il se renforcera",
+    "moyen_negatif": -0.234577922,
+    "moyen_positif": 0.069940476,
+    "nb_occurence": 224
+  },
+  {
+    "modalite": "Q_7.5.1.2_Type de financement_Amazonia_blossom",
+    "moyen_negatif": -0.234449761,
+    "moyen_positif": 0.105263158,
+    "nb_occurence": 76
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_Terminer l'enseignement primaire",
+    "moyen_negatif": -0.234006734,
+    "moyen_positif": 0.104938272,
+    "nb_occurence": 54
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_transport_route_C'est la meme chose",
+    "moyen_negatif": -0.233870968,
+    "moyen_positif": 0.086021505,
+    "nb_occurence": 124
+  },
+  {
+    "modalite": "Q_4.1.2.1_son",
+    "moyen_negatif": -0.233830846,
+    "moyen_positif": 0.077114428,
+    "nb_occurence": 402
+  },
+  {
+    "modalite": "Q_6.2.1.2_Utiliser_des_produits_chimiques_pour_controler_les_nuisibles_de_la_sante_familiale",
+    "moyen_negatif": -0.233415233,
+    "moyen_positif": 0.108108108,
+    "nb_occurence": 37
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Titre definitif (INCRA ou ITERPA)",
+    "moyen_negatif": -0.2328844,
+    "moyen_positif": 0.086419753,
+    "nb_occurence": 162
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_route_transport_mauvais",
+    "moyen_negatif": -0.232568402,
+    "moyen_positif": 0.069579288,
+    "nb_occurence": 206
+  },
+  {
+    "modalite": "Q_1.1.1.1 Personnes agees de moins de 18 ans ?",
+    "moyen_negatif": -0.231845078,
+    "moyen_positif": 0.07790927,
+    "nb_occurence": 338
+  },
+  {
+    "modalite": "Q_5.3.2_Produits_fruits_forestiers",
+    "moyen_negatif": -0.231200898,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 162
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_production_agricole_bon",
+    "moyen_negatif": -0.230769231,
+    "moyen_positif": 0.084249084,
+    "nb_occurence": 183
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_ecole secondaire incomplete",
+    "moyen_negatif": -0.22979798,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 37
+  },
+  {
+    "modalite": "Q_9.5.2_future5ans_autres",
+    "moyen_negatif": -0.229665072,
+    "moyen_positif": 0.122807018,
+    "nb_occurence": 19
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_education_mauvais",
+    "moyen_negatif": -0.229583975,
+    "moyen_positif": 0.079096045,
+    "nb_occurence": 59
+  },
+  {
+    "modalite": "Q_9.4.1_Changes_apres_soja_1, je pense qu'il a apporte des ameliorations",
+    "moyen_negatif": -0.229437229,
+    "moyen_positif": 0.142857143,
+    "nb_occurence": 21
+  },
+  {
+    "modalite": "Q_3.4.2_etude",
+    "moyen_negatif": -0.229090909,
+    "moyen_positif": 0.093333333,
+    "nb_occurence": 25
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_acteurs_exterieurs_Amelioree",
+    "moyen_negatif": -0.227272727,
+    "moyen_positif": 0.127777778,
+    "nb_occurence": 60
+  },
+  {
+    "modalite": "Q_6.2.1_Produits_chimiques_Avant, mais plus maintenant",
+    "moyen_negatif": -0.227272727,
+    "moyen_positif": 0.092592593,
+    "nb_occurence": 55
+  },
+  {
+    "modalite": "Q_9.4.2.3_Comment les agrotoxiques vous affectent-ils ?.1",
+    "moyen_negatif": -0.227272727,
+    "moyen_positif": 0.125,
+    "nb_occurence": 8
+  },
+  {
+    "modalite": "Q_7.6.2_Techniciens d'emetteurs",
+    "moyen_negatif": -0.226613966,
+    "moyen_positif": 0.120772947,
+    "nb_occurence": 69
+  },
+  {
+    "modalite": "Q_9.3.1_Changement_du_climat_augmentation_des_pluies",
+    "moyen_negatif": -0.22609209,
+    "moyen_positif": 0.064935065,
+    "nb_occurence": 155
+  },
+  {
+    "modalite": "Q_4.1.2.1_mother_father",
+    "moyen_negatif": -0.225589226,
+    "moyen_positif": 0.12345679,
+    "nb_occurence": 27
+  },
+  {
+    "modalite": "Q_1.1.1.1_betail",
+    "moyen_negatif": -0.225352113,
+    "moyen_positif": 0.075117371,
+    "nb_occurence": 71
+  },
+  {
+    "modalite": "Q_7.6.3_frequence_visites_Une fois par an",
+    "moyen_negatif": -0.225108225,
+    "moyen_positif": 0.158730159,
+    "nb_occurence": 42
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_production_agricole_Amelioree",
+    "moyen_negatif": -0.224371373,
+    "moyen_positif": 0.088652482,
+    "nb_occurence": 189
+  },
+  {
+    "modalite": "Q_4.5.1_revenu_travail_exterieur_Personne ne travaille en dehors du lotissement",
+    "moyen_negatif": -0.22410148,
+    "moyen_positif": 0.078488372,
+    "nb_occurence": 344
+  },
+  {
+    "modalite": "Q_9.2.1_nouvelles_activites",
+    "moyen_negatif": -0.223863636,
+    "moyen_positif": 0.091666667,
+    "nb_occurence": 160
+  },
+  {
+    "modalite": "Q_6.3.1.3_Pratique de l'agroecologie",
+    "moyen_negatif": -0.223652454,
+    "moyen_positif": 0.09439528,
+    "nb_occurence": 113
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_sante_Amelioree",
+    "moyen_negatif": -0.222962382,
+    "moyen_positif": 0.07183908,
+    "nb_occurence": 232
+  },
+  {
+    "modalite": "Q_2.2_municipe_Mojuí dos Campos",
+    "moyen_negatif": -0.222888786,
+    "moyen_positif": 0.069373942,
+    "nb_occurence": 197
+  },
+  {
+    "modalite": "Q_9.5.1.2_Les_enfants_voudraient-ils_aller_dans_l'enseignement_superieur ?",
+    "moyen_negatif": -0.222799423,
+    "moyen_positif": 0.077248677,
+    "nb_occurence": 315
+  },
+  {
+    "modalite": "Q_9.5.1_enfants_veulent_continuer_leur_activite_agricole_1",
+    "moyen_negatif": -0.222518068,
+    "moyen_positif": 0.071129707,
+    "nb_occurence": 240
+  },
+  {
+    "modalite": "Q_2.2.1_zona_S1 Cipoal",
+    "moyen_negatif": -0.222437137,
+    "moyen_positif": 0.134751773,
+    "nb_occurence": 48
+  },
+  {
+    "modalite": "Q_9.4.1.4_Croire_que_le_soja_a_apporte_des_ameliorations_que_vous_ne_pouvez_pas_dire",
+    "moyen_negatif": -0.222222222,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 36
+  },
+  {
+    "modalite": "Q_8.4.1_nouvelles_terres_",
+    "moyen_negatif": -0.222222222,
+    "moyen_positif": 0.092592593,
+    "nb_occurence": 18
+  },
+  {
+    "modalite": "Q_9.6.3_situation_agricole_familiale_Il se renforcera",
+    "moyen_negatif": -0.220979021,
+    "moyen_positif": 0.079487179,
+    "nb_occurence": 130
+  },
+  {
+    "modalite": "Q_7.6.1_Technique_d'assistance_a_la_visite",
+    "moyen_negatif": -0.219467401,
+    "moyen_positif": 0.117845118,
+    "nb_occurence": 99
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Licence professionnelle (INCRA) - LO",
+    "moyen_negatif": -0.218855219,
+    "moyen_positif": 0.086419753,
+    "nb_occurence": 27
+  },
+  {
+    "modalite": "Q_4.4.1_participe_groupe_femmes_Participer",
+    "moyen_negatif": -0.218181818,
+    "moyen_positif": 0.075555556,
+    "nb_occurence": 75
+  },
+  {
+    "modalite": "Q_6.1.2_emploi_main_d'oeuvre_Quelques fois par mois",
+    "moyen_negatif": -0.217681401,
+    "moyen_positif": 0.064220183,
+    "nb_occurence": 109
+  },
+  {
+    "modalite": "Q_4.4.1_participer_a_la_communaute_associative_Leadership",
+    "moyen_negatif": -0.217630854,
+    "moyen_positif": 0.111111111,
+    "nb_occurence": 33
+  },
+  {
+    "modalite": "Q_9.6.3_situation_communaute_si_continue_Vous ne savez pas",
+    "moyen_negatif": -0.217391304,
+    "moyen_positif": 0.094202899,
+    "nb_occurence": 46
+  },
+  {
+    "modalite": "Q_9.5.2_future5ans_voudrait_partir_d'une_autre_communaute",
+    "moyen_negatif": -0.215909091,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 8
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_pouvoirs_publics_bon",
+    "moyen_negatif": -0.215265866,
+    "moyen_positif": 0.08490566,
+    "nb_occurence": 106
+  },
+  {
+    "modalite": "Q_2.2.1_zona_M2 Pólo do Abacaxi",
+    "moyen_negatif": -0.214141414,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 45
+  },
+  {
+    "modalite": "Q_7.2.1_revenu_agricole_bon_mois_Plus de 1 a 3 salaires minimums",
+    "moyen_negatif": -0.213438735,
+    "moyen_positif": 0.092753623,
+    "nb_occurence": 116
+  },
+  {
+    "modalite": "Q_4.4.1_participer_au_groupe_jeunes_Participer",
+    "moyen_negatif": -0.213098729,
+    "moyen_positif": 0.064516129,
+    "nb_occurence": 93
+  },
+  {
+    "modalite": "Q_9.4.1.5_soja_n'a_pas_porte_de_dommage",
+    "moyen_negatif": -0.212847033,
+    "moyen_positif": 0.085828343,
+    "nb_occurence": 167
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communaute_liens_sociaux_moyen",
+    "moyen_negatif": -0.212121212,
+    "moyen_positif": 0.082304527,
+    "nb_occurence": 81
+  },
+  {
+    "modalite": "Q_3.1.4_Scolarite_Jamais etudie",
+    "moyen_negatif": -0.212121212,
+    "moyen_positif": 0.027777778,
+    "nb_occurence": 24
+  },
+  {
+    "modalite": "Q_9.5.1.2_Voudrait-on_des_futurs_enfants_autres",
+    "moyen_negatif": -0.210909091,
+    "moyen_positif": 0.066666667,
+    "nb_occurence": 26
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Transfere",
+    "moyen_negatif": -0.210909091,
+    "moyen_positif": 0.04,
+    "nb_occurence": 25
+  },
+  {
+    "modalite": "Q_6.1.4.3_herbicide_1 ou 2 fois par an",
+    "moyen_negatif": -0.210705183,
+    "moyen_positif": 0.087227414,
+    "nb_occurence": 107
+  },
+  {
+    "modalite": "Q_9.6.2_changements_15ans_pouvoirs_publics_Amelioree",
+    "moyen_negatif": -0.209893048,
+    "moyen_positif": 0.093137255,
+    "nb_occurence": 68
+  },
+  {
+    "modalite": "Q_4.1.2.1_outro_parente",
+    "moyen_negatif": -0.20979021,
+    "moyen_positif": 0.064102564,
+    "nb_occurence": 26
+  },
+  {
+    "modalite": "Q_9.6.1_situation_communautaire_sante_bon",
+    "moyen_negatif": -0.208706786,
+    "moyen_positif": 0.089201878,
+    "nb_occurence": 143
+  },
+  {
+    "modalite": "Q_7.6.2 Les techniciens universitaires",
+    "moyen_negatif": -0.20661157,
+    "moyen_positif": 0.090909091,
+    "nb_occurence": 11
+  },
+  {
+    "modalite": "Q_7.4.2_Difficulte_d'echange_autre",
+    "moyen_negatif": -0.205387205,
+    "moyen_positif": 0.102880658,
+    "nb_occurence": 82
+  },
+  {
+    "modalite": "Q_7.2.2_revenu_agricole_mois_difficile_Entre 0,5 et 1 salaire minimum",
+    "moyen_negatif": -0.204545455,
+    "moyen_positif": 0.0625,
+    "nb_occurence": 65
+  },
+  {
+    "modalite": "Q_5.3.2_Produits_forestiers",
+    "moyen_negatif": -0.200956938,
+    "moyen_positif": 0.078947368,
+    "nb_occurence": 38
+  },
+  {
+    "modalite": "Q_9.6.3_situation_soja_si_continue_La situation va empirer",
+    "moyen_negatif": -0.198653199,
+    "moyen_positif": 0.104938272,
+    "nb_occurence": 54
+  },
+  {
+    "modalite": "Q_2.2.1_zona_M5 Boa Sorte (Farinha)",
+    "moyen_negatif": -0.198347107,
+    "moyen_positif": 0.054545455,
+    "nb_occurence": 55
+  },
+  {
+    "modalite": "Q_9.4.2.4_Probleme de sante_cancer_pulverisations",
+    "moyen_negatif": -0.196969697,
+    "moyen_positif": 0.055555556,
+    "nb_occurence": 6
+  },
+  {
+    "modalite": "Q_9.4.1.4_Croit que_soja_a_apporte_des_ameliorations_dans_l'emploi",
+    "moyen_negatif": -0.194444444,
+    "moyen_positif": 0.194444444,
+    "nb_occurence": 36
+  },
+  {
+    "modalite": "Q_7.6.2_Les_autres_techniques",
+    "moyen_negatif": -0.193675889,
+    "moyen_positif": 0.101449275,
+    "nb_occurence": 23
+  },
+  {
+    "modalite": "Q_2.2.1_zona_B3 Săo Raimundo",
+    "moyen_negatif": -0.18961039,
+    "moyen_positif": 0.076190476,
+    "nb_occurence": 35
+  },
+  {
+    "modalite": "Q_3.4.2_Crafts",
+    "moyen_negatif": -0.189393939,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_2.2.1_zona_S4 Ituqui",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0.074074074,
+    "nb_occurence": 45
+  },
+  {
+    "modalite": "Q_4.1.2.1_genre",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0.058823529,
+    "nb_occurence": 17
+  },
+  {
+    "modalite": "Q_4.5.1_revenu_travail_exterieur_Plus de 3 a 5 salaires minimums",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0.133333333,
+    "nb_occurence": 6
+  },
+  {
+    "modalite": "Q_6.2.1.2_Utilisation_de_produits_chimiques_pour_lutter_contre_les_nuisibles_pr_consommateur",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0.133333333,
+    "nb_occurence": 5
+  },
+  {
+    "modalite": "Q_7.6.3_frequence_visites_Tous les mois",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_7.5.1.2_Tipo_financiamento_Pronaf_mais_alimentos",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_3.4.2_ville_d'emploi",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_5.2.1.6_ruches",
+    "moyen_negatif": -0.181818182,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_9.4.1_Changes_apres_soja_0",
+    "moyen_negatif": -0.175438596,
+    "moyen_positif": 0.081871345,
+    "nb_occurence": 57
+  },
+  {
+    "modalite": "Q_8.1.2_titre du bien_Projet d'etablissement",
+    "moyen_negatif": -0.170454545,
+    "moyen_positif": 0.0625,
+    "nb_occurence": 16
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire des semences",
+    "moyen_negatif": -0.170454545,
+    "moyen_positif": 0.125,
+    "nb_occurence": 8
+  },
+  {
+    "modalite": "Q_5.3.2_Produits a base de fibres forestieres",
+    "moyen_negatif": -0.166666667,
+    "moyen_positif": 0.055555556,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_6.1.4.2_defensifs_naturels_1 ou 2 fois par an",
+    "moyen_negatif": -0.159090909,
+    "moyen_positif": 0.180555556,
+    "nb_occurence": 25
+  },
+  {
+    "modalite": "Q_6.2.1.2_L'utilisation de produits chimiques pour lutter contre les parasites n'a pas fonctionne",
+    "moyen_negatif": -0.159090909,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_7.6.2_Les techniciens des magasins agricoles",
+    "moyen_negatif": -0.159090909,
+    "moyen_positif": 0.083333333,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_7.6.2_Representants_de_la_vente_techniciens",
+    "moyen_negatif": -0.159090909,
+    "moyen_positif": 0,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_7.6.3_frequence_visites_Lorsque le besoin s'en fait sentir",
+    "moyen_negatif": -0.148325359,
+    "moyen_positif": 0.140350877,
+    "nb_occurence": 19
+  },
+  {
+    "modalite": "Q_5.3.2_Produits_forestiers_huiles_resines",
+    "moyen_negatif": -0.147727273,
+    "moyen_positif": 0.083333333,
+    "nb_occurence": 8
+  },
+  {
+    "modalite": "Q_9.4.1.3_quand_changements_lies_soja_Augmentation au cours des 10 dernieres annees_  Augmentation au cours des 5 dernieres annees",
+    "moyen_negatif": -0.136363636,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_5.3.2_Produits_forestiers_peche",
+    "moyen_negatif": -0.128787879,
+    "moyen_positif": 0.138888889,
+    "nb_occurence": 12
+  },
+  {
+    "modalite": "Q_8.4.1_nouvelles_terres_Il voulait, mais il ne pouvait pas",
+    "moyen_negatif": -0.113636364,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_5.2.1.7_poissons",
+    "moyen_negatif": -0.113636364,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 4
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_Weir",
+    "moyen_negatif": -0.090909091,
+    "moyen_positif": 0,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_6.2.1.2_Utilisation_de_produits_chimiques_pour_controler_les_nuisibles_a_prix_eleve",
+    "moyen_negatif": -0.090909091,
+    "moyen_positif": 0.166666667,
+    "nb_occurence": 2
+  },
+  {
+    "modalite": "Q_7.4.1_Difficulte a produire du feu",
+    "moyen_negatif": -0.090909091,
+    "moyen_positif": 0,
+    "nb_occurence": 1
+  },
+  {
+    "modalite": "Q_6.2.1.2_Utilisation_de_produits_chimiques_pour_controler_les_nuisibles_sans_information",
+    "moyen_negatif": -0.060606061,
+    "moyen_positif": 0,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources_d'eau_seche_ou_de_deversoir",
+    "moyen_negatif": -0.060606061,
+    "moyen_positif": 0,
+    "nb_occurence": 3
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_Barrage de Poço",
+    "moyen_negatif": 0,
+    "moyen_positif": 0,
+    "nb_occurence": 1
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau de sechage_Rio",
+    "moyen_negatif": 0,
+    "moyen_positif": 0,
+    "nb_occurence": 1
+  },
+  {
+    "modalite": "Q_9.3.1.5_Sources d'eau riviere assechee",
+    "moyen_negatif": 0,
+    "moyen_positif": 0,
+    "nb_occurence": 1
+  }
+]

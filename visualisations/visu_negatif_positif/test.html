@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .yAxis line {
+            width:0;
+            stroke: rgb(255, 255, 255); /* Changez la couleur selon vos préférences */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test visu</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        d3.json("csvjson.json").then(function(data) {
+            var startIdx = 0; // Indice de départ des données à afficher
+
+            function updateGraph(startIndex) {
+                // Sélectionnez les 50 lignes à partir de l'indice de départ
+                var dataFiltree = data.slice(startIndex, startIndex + 50);
+                dataFiltree.sort((b,a) => parseInt(a.nbr_occurence) - parseInt(b.nbr_occurence));
+
+                // Dimensions du graphique
+                var width = 600;
+                var height = 500;
+                var margin = { top: 20, right: 30, bottom: 40, left: 300 };
+
+                // Création de l'espace de dessin SVG
+                var svg = d3.select("body")
+                    .select("svg")
+                    .remove(); // Supprimez le SVG précédent s'il existe
+                svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                // Création de l'infobulle
+                var tooltip = d3.select("body")
+                    .append("div")
+                    .attr("class", "tooltip")
+                    .style("opacity", 0);
+
+                // Echelle pour l'axe X (métriques)
+                var xScale = d3.scaleLinear()
+                    .domain([d3.min(data, d => d.moyen_negatif), d3.max(data, d => d.moyen_positif)])
+                    .range([0, width]);
+
+                // Echelle pour l'axe Y (noms des éléments)
+                var yScale = d3.scaleBand()
+                    .domain(dataFiltree.map(d => d.modalite))
+                    .range([height, 0])
+                    .padding(0.1);
+
+                // Ajout des barres pour les scores positifs
+                svg.selectAll(".barPositif")
+                    .data(dataFiltree)
+                    .enter().append("rect")
+                    .attr("class", "barPositif")
+                    .attr("x", d => xScale(Math.min(0, d.moyen_positif)))
+                    .attr("y", d => yScale(d.modalite))
+                    .attr("width", d => Math.abs(xScale(d.moyen_positif) - xScale(0)))
+                    .attr("height", yScale.bandwidth())
+                    .attr("fill", "green");
+
+                // Ajout des barres pour les scores négatifs
+                svg.selectAll(".barNegatif")
+                    .data(dataFiltree)
+                    .enter().append("rect")
+                    .attr("class", "barNegatif")
+                    .attr("x", d => xScale(Math.min(0, d.moyen_negatif)))
+                    .attr("y", d => yScale(d.modalite))
+                    .attr("width", d => Math.abs(xScale(d.moyen_negatif) - xScale(0)))
+                    .attr("height", yScale.bandwidth())
+                    .attr("fill", "red");
+
+                // Ajout des axes X et Y
+                svg.append("g")
+                    .attr("class", "xAxis")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(xScale));            
+                
+                svg.append("g")
+                    .attr("class", "yAxis")
+                    .call(d3.axisLeft(yScale));
+
+                // Ajout des événements de survol aux barres
+                svg.selectAll(".barPositif, .barNegatif")
+                    .on("mouseover", function(event, d) {
+                        tooltip.transition()
+                            .duration(200)
+                            .style("opacity", 1);
+                        tooltip.html("Modalité: " + d.modalite + "<br>" +
+                                    "score négatif: " + d.moyen_negatif + "<br>" +
+                                    "score positif: " + d.moyen_positif+ "<br>" +
+                                    "nombre de personne: " + d.nb_occurence
+                                    )
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function(event, d) {
+                        tooltip.transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                    });
+            }
+                
+            // Appel initial pour afficher les premières 50 modalités
+            updateGraph(startIdx);
+
+            // Ajout des événements de clic sur les flèches
+            d3.select("body").append("button")
+                .text("Précédent")
+                .on("click", function() {
+                    if (startIdx >= 50) {
+                        startIdx -= 50;
+                        updateGraph(startIdx);
+                    }
+                });
+
+            d3.select("body").append("button")
+                .text("Suivant")
+                .on("click", function() {
+                    if (startIdx + 50 < data.length) {
+                        startIdx += 50;
+                        updateGraph(startIdx);
+                    }
+                });   
+        });
+    </script>
+</body>
+</html>
