@@ -1,0 +1,20 @@
+Profil type pour chaque cluster basé sur les modalités uniques identifiées :
+
+Cluster 0 : Prudent
+Ils valorise l'éducation avec une situation jugée bonne dans la communauté. Est préoccupé quant à l'emploi en dehors de l'agriculture.
+Agriculture et Environnement: Ils utilisent rarement les insecticides chimiques et ne perçoivent pas ou peu de dégradations causés par le soja, suggérant une approche mesurée sur le sujet de l'agriculture et de l'environnement.
+
+Cluster 1 : Observe l'environnement
+Ils observent les changements agricoles et environnementaux, ils témoignent de changements constants liés à la culture du soja sur une période de 15 ans et souligne l'impact négatif du soja sur l'environnement. Ce cluster se distingue par sa conscience environnementale et son attention aux effets de l'agriculture intensive.
+Fortement contre la culture industrielle du soja.
+
+Cluster 2 : Observe le changement sociale et environnemental
+Ils notent une situation sanitaire moyenne dans la communauté, indiquant peut-être des préoccupations de santé spécifiques mais sans être alarmant.
+Ils remarquent une évolution des pratiques agricoles, spécialement par rapport au soja et au seigle, ces dernières années. Cela montre qu'ils portent une attention particulière aux dynamiques de changement dans l'agriculture.
+
+Cluster 3 : Progressiste
+Ils remarquent une amélioration des liens sociaux et de la production agricole au cours des 15 dernières années, ce sont ceux ayant la perception la plus positive des changements et du progrès au sein de la communauté.
+
+Cluster 4 : Inquiet
+Ils sont très inquiets concernant les effets des agrotoxiques sur la santé et l'environnement, ils estiment la situation sanitaire plutôt mauvaise et observent une détérioration de la santé publique.
+Enfin ils montrent un intérêt pour l'éducation mais restent prudent face aux défis tels que la mauvaise situation des routes et des transports, et préfèrent renforcer les initiatives locales plutôt que de chercher des opportunités ailleur.

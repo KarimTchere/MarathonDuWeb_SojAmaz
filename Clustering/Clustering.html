@@ -1,224 +1,86 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Diagramme Noeud-Lien Interactif avec Légende Externe</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <style>
-        .links line {
-            stroke: #999;
-            stroke-opacity: 0.6;
-        }
-
-        .nodes circle {
-            stroke: #fff;
-            stroke-width: 1.5px;
-        }
-
-        #legend {
-            position: fixed;
-            right: 100px;
-            top: 100px;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4px;
-        }
-
-        .legend-color {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-
-        svg {
-            cursor: grab;
-        }
-        svg:active {
-            cursor: grabbing;
-        }
-
-        body {
-          display: flex;
-          align-items: flex-start;
-        }
-
-        #svg-container {
-          flex-grow: 1;
-        }
-    </style>
+  <title>Interactive Clustering in D3</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    .node {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+    .link {
+      stroke: #999;
+      stroke-opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-<div id="svg-container">
-    <svg width="960" height="600"></svg>
-</div>
-<div id="legend"></div>
-<button id="toggleBrushMode" style="position: absolute; right: 80px; top: 230px;">Activer le brush</button>
+  <script>
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
-<script>
-d3.json("Data_with_clusters_SojaXPesticideXSanté (2).json").then(function(graph) {
-    const svgContainer = d3.select("#svg-container"),
-        svg = svgContainer.select("svg"),
-        width = +svgContainer.node().getBoundingClientRect().width,
-        height = +svg.attr("height");
+    const svg = d3.select("body")
+      .append("svg")
+        .attr("width", width)
+        .attr("height", height);
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    d3.json("Data_with_clusters_SojaXPesticideXSanté (2).json")
+      .then(data => {
+        const simulation = d3.forceSimulation(data.nodes)
+          .force("charge", d3.forceManyBody().strength(-100))
+          .force("link", d3.forceLink(data.links))
+          .force("x", d3.forceX())
+          .force("y", d3.forceY())
+          .on("tick", ticked);
 
-    const simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(100))
-        .force("charge", d3.forceManyBody().strength(-50))
-        .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("collision", d3.forceCollide().radius(10));
+        const link = svg.append("g")
+          .attr("class", "links")
+          .selectAll("line")
+          .data(data.links)
+          .enter().append("line")
+            .attr("class", "link");
 
-    const g = svg.append("g");
+        const node = svg.append("g")
+          .attr("class", "nodes")
+          .selectAll("circle")
+          .data(data.nodes)
+          .enter().append("circle")
+            .attr("class", "node")
+            .attr("r", 5)
+            .call(d3.drag()
+              .on("start", dragstarted)
+              .on("drag", dragged)
+              .on("end", dragended));
 
-    const link = g.append("g")
-        .attr("class", "links")
-        .selectAll("line")
-        .data(graph.links)
-        .join("line")
-        .attr("stroke-width", d => Math.sqrt(d.value));
-
-    const node = g.append("g")
-        .attr("class", "nodes")
-        .selectAll("circle")
-        .data(graph.nodes)
-        .join("circle")
-        .attr("r", 10) 
-        .attr("fill", d => color(d.group));
-
-    node.append("title").text(d => d.id);
-
-    simulation.nodes(graph.nodes).on("tick", ticked);
-
-    simulation.force("link").links(graph.links);
-
-    function ticked() {
-        link
+        function ticked() {
+          link
             .attr("x1", d => d.source.x)
             .attr("y1", d => d.source.y)
             .attr("x2", d => d.target.x)
             .attr("y2", d => d.target.y);
 
-        node
+          node
             .attr("cx", d => d.x)
             .attr("cy", d => d.y);
-    }
-
-    let brushMode = false; // État initial du mode brush
-
-    const brush = d3.brush()
-        .on("start brush end", (event) => {
-            if (!event.selection) return;
-
-            const [[x0, y0], [x1, y1]] = event.selection;
-            const zoomTransform = d3.zoomTransform(svg.node());
-
-            node
-                .style("stroke", d => {
-                    const transformedPoint = zoomTransform.apply([d.x, d.y]);
-                    const [px, py] = transformedPoint;
-                    return px >= x0 && px <= x1 && py >= y0 && py <= y1 ? "grey" : "none";
-                })
-                .style("stroke-width", d => {
-                    const transformedPoint = zoomTransform.apply([d.x, d.y]);
-                    const [px, py] = transformedPoint;
-                    return px >= x0 && px <= x1 && py >= y0 && py <= y1 ? 2 : 1.5; // Adjusted stroke width
-                })
-                .attr("r", d => {
-                    const transformedPoint = zoomTransform.apply([d.x, d.y]);
-                    const [px, py] = transformedPoint;
-                    return px >= x0 && px <= x1 && py >= y0 && py <= y1 ? 8 : 5; // Adjusted circle radius
-                });
-        });
-
-        // Créez une fonction pour déterminer si un point est sous le brush
-    function isUnderBrush(d) {
-        const [[x0, y0], [x1, y1]] = d3.brushSelection(node.node().parentNode);
-        return x0 <= d.x && d.x <= x1 && y0 <= d.y && d.y <= y1;
-    }
-
-    // Créez une fonction pour mettre à jour le tableau
-    function updateTable() {
-        // Filtrer les données pour obtenir seulement celles sous le brush
-        let brushedData = graph.nodes.filter(isUnderBrush);
-
-        // Calculer les valeurs pour chaque variable
-        let values = {};
-        brushedData.forEach(d => {
-            for (let key in d) {
-                if (d[key] === 1) {
-                    if (!values[key]) {
-                        values[key] = 0;
-                    }
-                    values[key]++;
-                }
-            }
-        });
-
-        // Sélectionner le tableau et supprimer les lignes existantes
-        let table = d3.select("#dataTable");
-        table.selectAll("tr").remove();
-
-        // Ajouter les nouvelles lignes
-        for (let key in values) {
-            let row = table.append("tr");
-            row.append("td").text(key);
-            row.append("td").text(values[key]);
         }
-    }
 
-        // Appelez updateTable lorsque le brush est mis à jour
-        brush.on("end", updateTable);
+        function dragstarted(d) {
+          if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        }
 
-    const zoom = d3.zoom()
-        .scaleExtent([0.1, 8])
-        .on("zoom", (event) => {
-            g.attr("transform", event.transform);
-        });
+        function dragged(d) {
+          d.fx = d3.event.x;
+          d.fy = d3.event.y;
+        }
 
-    svg.call(zoom);
-
-    d3.select("#toggleBrushMode")
-        .on("click", function() {
-            brushMode = !brushMode;
-            this.textContent = brushMode ? 'Désactiver le mode brush' : 'Activer le mode brush';
-
-            if (brushMode) {
-                svg.call(brush);
-            } else {
-                svg.on(".brush", null);
-                svg.select(".brush").remove();
-            }
-        });
-
-    const legend = d3.select("#legend");
-
-    graph.nodes.map(d => d.group).filter((v, i, a) => a.indexOf(v) === i).sort().forEach(function(group) {
-        let legendItem = legend.append("div").attr("class", "legend-item");
-
-        legendItem.append("span")
-            .attr("class", "legend-color")
-            .style("background-color", color(group));
-
-        legendItem.append("span").text("Cluster " + group);
-    });
-});
-</script>
-<table id="dataTable">
-    <thead>
-        <tr>
-            <th>Variable</th>
-            <th>Count</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Les lignes du tableau seront ajoutées ici par D3.js -->
-    </tbody>
-</table>
+        function dragended(d) {
+          if (!d3.event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        }
+      });
+  </script>
 </body>
 </html>
