@@ -1,6 +1,6 @@
 library(readxl)
 
-data <- read_excel("C:/Users/duboi/Desktop/cours/M1/mdw/MarathonDuWeb_SojAmaz/Data/test.xlsx")
+data <- read_excel("C:/Users/FZ/Desktop/marathon web/github/MarathonDuWeb_SojAmaz/Datatest.xlsx")
 
 data$Q_2_2_municipe <- factor(data$Q_2_2_municipe)
 

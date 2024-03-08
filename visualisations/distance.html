@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation des données</title>
+  <!-- Ajouter la balise script pour D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<div id="chart"></div>
+
+<div>
+  <input type="radio" name="impactType" value="healthProblem" checked> Problème de santé
+  <input type="radio" name="impactType" value="waterQuality"> Mauvaise qualité de l'eau
+</div>
+
+<script>
+  d3.json("data.json").then(function(data) {
+    // Convertir une chaîne de caractères en float
+    function convertToFloat(str) {
+      return parseFloat(str.replace(",", "."));
+    }
+
+    // Fonction pour calculer les pourcentages en fonction du type d'impact sélectionné
+    function calculatePercentages(impactType) {
+      const variable = (impactType === "healthProblem") ? "Q_9.4.1.5_soja_a_porte_atteinte_a_la_sante_familiale" : "Q_9.4.1.5_soja_apporte_une_mauvaise_qualite_de_l'eau";
+      
+      // Données des pourcentages pour chaque intervalle de distance
+      const distanceIntervals = [
+        { range: [0, 500], count: 0 },
+        { range: [501, 1000], count: 0 },
+        { range: [1001, 1500], count: 0 },
+        { range: [1501, 2000], count: 0 },
+        { range: [2001, 2500], count: 0 },
+        { range: [2501, 3000], count: 0 },
+        { range: [3001, 3500], count: 0 },
+        { range: [3501, 4000], count: 0 },
+        { range: [4001, 4500], count: 0 },
+        { range: [4501, 10000], count: 0 }
+      ];
+
+      // Parcourir les données pour compter les occurrences dans chaque intervalle
+      data.forEach(d => {
+        const distance = convertToFloat(d.Q_11_Dist_soja);
+        const affected = parseInt(d[variable]);
+        distanceIntervals.forEach(interval => {
+          if (distance >= interval.range[0] && distance <= interval.range[1] && affected === 1) {
+            interval.count++;
+          }
+        });
+      });
+
+      // Calculer le pourcentage pour chaque intervalle
+      const totalAffected = data.filter(d => parseInt(d[variable]) === 1).length;
+      distanceIntervals.forEach(interval => {
+        interval.percentage = (interval.count / totalAffected) * 100;
+      });
+
+      return distanceIntervals;
+    }
+
+    // Dimension du graphique
+    var width = 500; // Largeur du graphique
+    var height = 400; // Hauteur du graphique
+    var margin = { top: 20, right: 20, bottom: 60, left: 60 }; // Marges
+
+    // Créer le SVG
+    var svg = d3.select("#chart")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // Echelle pour l'axe des X
+    var xScale = d3.scaleBand()
+      .range([0, width])
+      .padding(0.1);
+
+    // Echelle pour l'axe des Y
+    var yScale = d3.scaleLinear()
+      .range([height, 0]);
+
+    // Ajout de l'axe des X
+    svg.append("g")
+      .attr("class", "x-axis")
+      .attr("transform", "translate(0," + height + ")");
+
+    // Ajout de l'axe des Y
+    svg.append("g")
+      .attr("class", "y-axis");
+
+    // Gestion des événements de changement de sélection des boutons radio
+    d3.selectAll('input[name="impactType"]').on("change", function() {
+      const impactType = this.value;
+      updateData(impactType);
+    });
+
+    // Fonction pour mettre à jour les données du graphique en fonction du type d'impact sélectionné
+    function updateData(impactType) {
+      const percentages = calculatePercentages(impactType);
+
+      // Mise à jour des domaines des échelles
+      xScale.domain(percentages.map(d => d.range.toString()));
+      yScale.domain([0, d3.max(percentages, d => d.percentage)]);
+
+      // Mise à jour de l'axe des X
+      svg.select(".x-axis")
+        .transition()
+        .duration(500)
+        .call(d3.axisBottom(xScale))
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
+
+      // Mise à jour de l'axe des Y
+      svg.select(".y-axis")
+        .transition()
+        .duration(500)
+        .call(d3.axisLeft(yScale));
+
+      // Sélection des barres
+      var bars = svg.selectAll(".bar")
+        .data(percentages);
+
+      // Sortie des barres existantes
+      bars.exit().remove();
+
+      // Entrée des nouvelles barres
+      bars.enter().append("rect")
+        .attr("class", "bar")
+        .merge(bars)
+        .transition()
+        .duration(500)
+        .attr("x", d => xScale(d.range.toString()))
+        .attr("y", d => yScale(d.percentage))
+        .attr("width", xScale.bandwidth())
+        .attr("height", d => height - yScale(d.percentage))
+        .attr("fill", "steelblue");
+
+      // Ajout des valeurs des pourcentages au-dessus des barres
+      var labels = svg.selectAll(".label")
+        .data(percentages);
+
+      labels.exit().remove();
+
+      labels.enter().append("text")
+        .attr("class", "label")
+        .merge(labels)
+        .transition()
+        .duration(500)
+        .attr("x", d => xScale(d.range.toString()) + xScale.bandwidth() / 2)
+        .attr("y", d => yScale(d.percentage) - 5)
+        .attr("text-anchor", "middle")
+        .text(d => d3.format(".2f")(d.percentage) + "%");
+    }
+
+    // Fonction pour dessiner le graphique initial avec les données pour les problèmes de santé
+    updateData("healthProblem");
+
+  });
+</script>
+</body>
+</html>

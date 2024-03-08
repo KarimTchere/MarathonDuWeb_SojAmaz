@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation des données</title>
+  <!-- Ajouter la balise script pour D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    /* Ajouter du style pour rapprocher les boutons radio du graphique */
+    #chart-container {
+      text-align: center;
+    }
+    #chart {
+      display: inline-block;
+      vertical-align: top;
+    }
+    #radio-buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="chart-container">
+  <div id="chart"></div>
+
+  <div id="radio-buttons">
+    <input type="radio" name="impactType" value="negative" checked> Impact négatif
+    <input type="radio" name="impactType" value="positive"> Impact positif
+  </div>
+</div>
+
+<script>
+  d3.json("data.json").then(function(data) {
+    // Fonction pour calculer le pourcentage de lignes ayant la valeur 1 pour chaque variable
+    function calculatePercentage(variable) {
+      const filteredData = data.filter(d => d[variable] === 1);
+      return (filteredData.length / data.length) * 100;
+    }
+
+    // Liste des variables binaires pour les impacts négatifs
+    const negativeVariables = [
+      { name: "Q_9.4.1.5_soja_n'a_pas_porte_de_dommage", displayName: "Aucun impact négatif" },
+      { name: "Q_9.4.1.5_soja a entraîne une perte de production", displayName: "Perte de production" },
+      { name: "Q_9.4.1.5_soja_a_porte_des_dommages_aux_difficultes_d'acces_au_lot", displayName: "Difficulté d'accès aux terres" },
+      { name: "Q_9.4.1.5_soja_apporte_une_mauvaise_qualite_de_l'eau", displayName: "Mauvaise qualité de l'eau" },
+      { name: "Q_9.4.1.5_soja_a_porte_atteinte_a_la_sante_familiale", displayName: "Atteinte à la santé familiale" },
+      { name: "Q_9.4.1.5_soja_a_apporte_des_dommages_au_changement_climatique", displayName: "A entraîné des changements climatiques" },
+      { name: "Q_9.4.1.5_soja_a_endommage_l'environnement", displayName: "A endommagé l'environnement" },
+      { name: "Q_9.4.1.5_soja_a_porte_des_blessures_aux_autres", displayName: "A causé d'autres préjudices" }
+    ];
+
+    // Liste des variables binaires pour les impacts positifs
+    const positiveVariables = [
+      { name: "Q_9.4.1.4_Les_soja_apportent-ils_des_ameliorations_non", displayName: "Aucun impact positif" },
+      { name: "Q_9.4.1.4_Croit que_soja_a_apporte_des_ameliorations_dans_l'emploi", displayName: "Amélioration de l'emploi" },
+      { name: "Q_9.4.1.4_Croit que_soja_a_apporte_une_meilleure_prise_en_charge_des_routes", displayName: "Meilleure prise en charge des routes" },
+      { name: "Q_9.4.1.4_Croit que_soja_a_apporte_des_ameliorations_a_l'acces_aux_intrants", displayName: "Amélioration de l'accès aux intrants" },
+      { name: "Q_9.4.1.4_Acredita_soja_apporte_des_ameliorations_autres", displayName: "Autres améliorations" },
+      { name: "Q_9.4.1.4_Croire_que_le_soja_a_apporte_des_ameliorations_que_vous_ne_pouvez_pas_dire", displayName: "Améliorations non spécifiées" }
+    ];
+
+    // Fonction pour filtrer les variables en fonction du type d'impact sélectionné
+    function filterVariables(impactType) {
+      if (impactType === "negative") {
+        return negativeVariables;
+      } else {
+        return positiveVariables;
+      }
+    }
+
+    // Fonction pour calculer les pourcentages en fonction du type d'impact sélectionné
+    function calculatePercentages(impactType) {
+      const variables = filterVariables(impactType);
+      return variables.map(variable => ({
+        variable: variable.displayName,
+        percentage: calculatePercentage(variable.name)
+      }));
+    }
+
+    // Dimension du graphique
+    var width = 300; // Réduire la largeur du graphique
+    var height = 400; // Augmenter la hauteur du graphique
+    var margin = {top: 20, right: 20, bottom: 60, left: 200}; // Augmenter la marge à gauche
+    var svg = d3.select("#chart")
+                .append("svg")
+                .attr("width", width + margin.left + margin.right + 400) // Augmenter la largeur du SVG
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+    // Gestion des événements de changement de sélection des boutons radio
+    d3.selectAll('input[name="impactType"]').on("change", function() {
+      const impactType = this.value;
+      updateData(impactType);
+    });
+
+    // Actualisation du graphique initial avec les données pour les impacts négatifs
+    updateData("negative");
+
+    // Fonction pour mettre à jour les données du graphique en fonction du type d'impact sélectionné
+    function updateData(impactType) {
+      const percentages = calculatePercentages(impactType);
+
+      // Tri des pourcentages par ordre décroissant
+      percentages.sort((a, b) => b.percentage - a.percentage);
+
+      // Echelle pour les barres horizontales
+      var xScale = d3.scaleLinear()
+                     .domain([0, d3.max(percentages, function(d) { return d.percentage; })])
+                     .range([0, width]);
+      
+      // Mise à jour des barres horizontales
+      svg.selectAll(".bar")
+         .data(percentages)
+         .join("rect")
+         .attr("class", "bar")
+         .attr("x", margin.left) // Déplacer les barres à la gauche du graphique
+         .attr("y", function(d, i) { return i * 30; })
+         .attr("width", function(d) { return xScale(d.percentage); })
+         .attr("height", 25)
+         .attr("fill", "steelblue"); // Changer la couleur des barres en bleu
+
+      // Mise à jour des étiquettes à gauche des barres
+      svg.selectAll(".label")
+         .data(percentages)
+         .join("text")
+         .attr("class", "label")
+         .attr("x", margin.left - 5) // Déplacer les étiquettes à la gauche des barres
+         .attr("y", function(d, i) { return i * 30 + 15; })
+         .attr("text-anchor", "end") // Aligner le texte à droite
+         .text(function(d) { return d.variable; });
+
+      // Mise à jour des pourcentages à droite des barres
+      svg.selectAll(".percentage")
+         .data(percentages)
+         .join("text")
+         .attr("class", "percentage")
+         .attr("x", function(d) { return margin.left + xScale(d.percentage) + 5; })
+         .attr("y", function(d, i) { return i * 30 + 15; })
+         .attr("text-anchor", "start") // Aligner le texte à gauche
+         .text(function(d) { return d3.format(".2f")(d.percentage) + "%"; });
+    }
+
+  });
+</script>
+</body>
+</html>
